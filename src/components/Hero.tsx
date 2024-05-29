@@ -1,0 +1,87 @@
+"use client";
+
+import React from "react";
+import { motion } from "framer-motion";
+
+const Hero: React.FC = () => {
+  return (
+    <>
+      <motion.section
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="flex flex-col md:flex-row items-center justify-center rounded-xl shadow-xl min-h-screen p-4 bg-gradient-to-r from-slate-500 to-indigo-700 dark:from-slate-800 dark:to-indigo-900 text-white dark:bg-slate-800"
+      >
+        <div className="md:w-1/2 p-8 space-y-6 text-center md:text-left">
+          <motion.h1
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-wide leading-tight text-white drop-shadow-lg dark:text-gray-200"
+          >
+            I'm Ismail
+          </motion.h1>
+          <motion.h2
+            initial={{ y: -50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.7 }}
+            className="text-3xl sm:text-4xl md:text-4xl font-semibold text-white drop-shadow-md dark:text-gray-300"
+          >
+            I love coding
+          </motion.h2>
+          <motion.p
+            initial={{ y: -20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.9 }}
+            className="text-base sm:text-lg md:text-lg text-white drop-shadow-sm dark:text-gray-300"
+          >
+            I am a 16 year old vocational school student and dream of becoming a
+            software engineer.
+          </motion.p>
+          <div className="space-x-4">
+            <motion.button
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 0 20px rgba(0, 0, 0, 0.5)",
+              }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-white text-indigo-600 hover:bg-indigo-100 transition duration-300 px-4 py-2 sm:px-6 sm:py-3 rounded-lg shadow-md dark:hover:text-indigo-400"
+            >
+              My Portfolio
+            </motion.button>
+            <a href="https://wa.me/6285338572860" target="\_blank">
+              <motion.button
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 0 20px rgba(0, 0, 0, 0.5)",
+                }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-transparent text-white border-white border-2 hover:text-indigo-600 hover:bg-white transition duration-300 px-4 py-2 sm:px-6 sm:py-3 rounded-lg shadow-md dark:border-gray-300 dark:hover:text-indigo-400 dark:hover:bg-white dark:hover:border-indigo-600"
+              >
+                Contact Me
+              </motion.button>
+            </a>
+          </div>
+        </div>
+        <div className="md:w-1/2 relative mt-8 md:mt-0">
+          <motion.img
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            src="/foto.jpg"
+            alt="John Doe"
+            className="w-full h-auto object-cover rounded-lg shadow-xl"
+          />
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.5 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            className="absolute inset-0 rounded-lg bg-gradient-to-r from-slate-900/50 to-sky-950/50"
+          />
+        </div>
+      </motion.section>
+    </>
+  );
+};
+
+export default Hero;

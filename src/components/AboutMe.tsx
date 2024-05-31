@@ -9,7 +9,7 @@ import {
   FaMusic,
 } from "react-icons/fa";
 
-const AboutMe = React.forwardRef((props, ref) => {
+const AboutMe = React.forwardRef<HTMLElement>((props, ref) => {
   return (
     <motion.section
       id="tentang-saya"

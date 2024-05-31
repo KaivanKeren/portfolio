@@ -48,7 +48,8 @@ const Hero: React.FC<HeroProps> = ({ scrollToRef }) => {
             transition={{ duration: 1, delay: 0.9 }}
             className="text-base sm:text-lg md:text-lg text-white drop-shadow-sm dark:text-gray-300"
           >
-            Saya seorang siswa sekolah kejuruan berusia 16 tahun dan bercita-cita menjadi seorang Software Engineer.
+            Saya seorang siswa sekolah kejuruan berusia 16 tahun dan
+            bercita-cita menjadi seorang Software Engineer.
           </motion.p>
           <div className="space-x-4">
             <motion.button
@@ -62,7 +63,11 @@ const Hero: React.FC<HeroProps> = ({ scrollToRef }) => {
             >
               Tentang Saya
             </motion.button>
-            <a href="https://wa.me/6285338572860" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://wa.me/6285338572860"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <motion.button
                 whileHover={{
                   scale: 1.05,
@@ -76,7 +81,15 @@ const Hero: React.FC<HeroProps> = ({ scrollToRef }) => {
             </a>
           </div>
         </div>
-        <div className="md:w-1/2 relative mt-8 md:mt-0">
+        <motion.div
+          whileHover={{
+            scale: 1.01,
+            rotate: 1.6,
+            boxShadow: "0 10px 20px rgba(0, 0, 0, 0.3)", // Mengubah bayangan saat hover
+            filter: "brightness(1.2)", // Menambahkan efek pencerahan pada gambar saat hover
+          }}
+          className="md:w-1/2 relative mt-8 md:mt-0"
+        >
           <motion.img
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -85,13 +98,14 @@ const Hero: React.FC<HeroProps> = ({ scrollToRef }) => {
             alt="John Doe"
             className="w-full h-auto object-cover rounded-lg shadow-xl"
           />
+
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.5 }}
             transition={{ duration: 1, delay: 0.5 }}
             className="absolute inset-0 rounded-lg bg-gradient-to-r from-slate-900/50 to-sky-950/50"
           />
-        </div>
+        </motion.div>
       </motion.section>
     </>
   );

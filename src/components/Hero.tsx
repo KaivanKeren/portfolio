@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { Typewriter } from "react-simple-typewriter";
 
 type HeroProps = {
   scrollToRef: React.RefObject<HTMLElement>;
@@ -32,7 +33,19 @@ const Hero: React.FC<HeroProps> = ({ scrollToRef }) => {
             transition={{ duration: 1, delay: 0.5 }}
             className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-wide leading-tight text-white drop-shadow-lg dark:text-gray-200"
           >
-            Saya Ismail
+            <Typewriter
+              words={["Saya Ismail"]}
+              loop={false}
+              cursor
+              cursorStyle="_"
+              typeSpeed={100}
+              deleteSpeed={80}
+              delaySpeed={1000}
+              initial={{ y: -100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1, delay: 0.5 }}
+              className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-wide leading-tight text-white drop-shadow-lg dark:text-gray-200"
+            />
           </motion.h1>
           <motion.h2
             initial={{ y: -50, opacity: 0 }}

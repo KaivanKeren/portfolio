@@ -27,7 +27,7 @@ const Hero: React.FC<HeroProps> = ({ scrollToRef }) => {
         className="flex flex-col md:flex-row items-center justify-center rounded-xl shadow-xl min-h-screen p-4 bg-gradient-to-r from-slate-500 to-indigo-700 dark:from-slate-800 dark:to-indigo-900 text-white dark:bg-slate-800"
       >
         <div className="md:w-1/2 p-8 space-y-6 text-center md:text-left">
-          <motion.h1
+          <motion.div
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
@@ -37,16 +37,12 @@ const Hero: React.FC<HeroProps> = ({ scrollToRef }) => {
               words={["Saya Ismail"]}
               loop={false}
               cursor
-              cursorStyle="_"
+              cursorStyle="|"
               typeSpeed={100}
               deleteSpeed={80}
-              delaySpeed={1000}
-              initial={{ y: -100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 1, delay: 0.5 }}
-              className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-wide leading-tight text-white drop-shadow-lg dark:text-gray-200"
+              delaySpeed={1500}
             />
-          </motion.h1>
+          </motion.div>
           <motion.h2
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}

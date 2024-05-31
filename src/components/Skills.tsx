@@ -64,13 +64,13 @@ const Skills = () => {
               variants={cardVariants}
               className="text-4xl font-bold text-indigo-600 dark:text-indigo-400 mb-4"
             >
-              My Skills
+              Keterampilan Saya
             </motion.h2>
             <motion.p
               variants={cardVariants}
               className="text-gray-600 dark:text-gray-200"
             >
-              Here are some of the skills I have acquired over the years.
+              Berikut adalah beberapa keterampilan yang saya peroleh selama lebih dari satu tahun belajar.
             </motion.p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

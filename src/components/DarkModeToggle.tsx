@@ -34,6 +34,9 @@ export default function DarkModeToggle() {
       <AnimatePresence mode="wait" initial={false}>
         {isDarkMode ? (
           <motion.svg
+            whileHover={{
+              scale: 1.1,
+            }}
             key="dark"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
@@ -50,6 +53,9 @@ export default function DarkModeToggle() {
           </motion.svg>
         ) : (
           <motion.svg
+            whileHover={{
+              scale: 1.1,
+            }}
             key="light"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 384 512"

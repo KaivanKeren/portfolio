@@ -3,12 +3,18 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const Hero = ({ scrollToRef }) => {
-  const scrollToSection = (ref) => {
-    window.scrollTo({
-      top: ref.current.offsetTop,
-      behavior: "smooth",
-    });
+type HeroProps = {
+  scrollToRef: React.RefObject<HTMLElement>;
+};
+
+const Hero: React.FC<HeroProps> = ({ scrollToRef }) => {
+  const scrollToSection = (ref: React.RefObject<HTMLElement>) => {
+    if (ref.current) {
+      window.scrollTo({
+        top: ref.current.offsetTop,
+        behavior: "smooth",
+      });
+    }
   };
 
   return (

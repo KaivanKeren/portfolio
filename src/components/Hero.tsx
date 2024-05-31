@@ -33,8 +33,9 @@ const Hero: React.FC<HeroProps> = ({ scrollToRef }) => {
             transition={{ duration: 1, delay: 0.5 }}
             className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-wide leading-tight text-white drop-shadow-lg dark:text-gray-200"
           >
+            Saya 
             <Typewriter
-              words={["Saya Ismail"]}
+              words={[" Ismail", " Siswa SMK"]}
               loop={false}
               cursor
               cursorStyle="|"

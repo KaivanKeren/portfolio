@@ -48,10 +48,10 @@ const Projects = () => {
               variants={cardVariants}
               className="text-4xl font-bold mb-4"
             >
-              My Projects
+              Project Saya
             </motion.h2>
             <motion.p variants={cardVariants} className="text-gray-200">
-              Check out some of my recent projects.
+              Lihat beberapa proyek terbaru saya.
             </motion.p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -70,12 +70,9 @@ const Projects = () => {
                   className="w-full h-48 object-cover rounded-lg mb-4 transition duration-300 hover:scale-105"
                 />
               </a>
-              <h3 className="text-2xl font-bold mb-4">
-                Graduation Announcement
-              </h3>
+              <h3 className="text-2xl font-bold mb-4">Pengumuman Kelulusan</h3>
               <p className="text-gray-600 dark:text-gray-200 mb-4">
-                Website for announcements of graduation for grade 12 students at
-                SMKN 2 Kudus.
+                Website pengumuman kelulusan siswa kelas 12 di SMKN 2 Kudus.
               </p>
               <div className="absolute bottom-0 left-0 w-full bg-gradient-to-r from-indigo-500 to-purple-500 h-1 transform -translate-y-full group-hover:translate-y-0 transition duration-500"></div>
             </motion.div>
@@ -95,11 +92,9 @@ const Projects = () => {
                   className="w-full h-48 object-cover rounded-lg mb-4 transition duration-300 hover:scale-105"
                 />
               </a>
-              <h3 className="text-2xl font-bold mb-4">
-                Student Registration Queue
-              </h3>
+              <h3 className="text-2xl font-bold mb-4">Antrian PPDB Siswa</h3>
               <p className="text-gray-600 dark:text-gray-200 mb-4">
-                Website for taking the registration queue for new students at
+                Website pengambilan antrian pendaftaran peserta didik baru di
                 SMKN 2 Kudus.
               </p>
               <div className="absolute bottom-0 left-0 w-full bg-gradient-to-r from-indigo-500 to-purple-500 h-1 transform -translate-y-full group-hover:translate-y-0 transition duration-500"></div>
@@ -122,8 +117,8 @@ const Projects = () => {
               </a>
               <h3 className="text-2xl font-bold mb-4">BSD Mart</h3>
               <p className="text-gray-600 dark:text-gray-200 mb-4">
-                Website-based digital waste bank application which will be
-                contested in Krenova, Kudus Regency in 2024.
+                Aplikasi bank sampah digital berbasis website yang akan
+                dipertandingkan di Krenova, Kabupaten Kudus pada tahun 2024.
               </p>
               <div className="absolute bottom-0 left-0 w-full bg-gradient-to-r from-indigo-500 to-purple-500 h-1 transform -translate-y-full group-hover:translate-y-0 transition duration-500"></div>
             </motion.div>

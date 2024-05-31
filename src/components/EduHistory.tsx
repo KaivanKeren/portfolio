@@ -6,17 +6,17 @@ const EduHistory = () => {
   const educationData = [
     {
       institution: "SD 3 Adiwarno",
-      degree: "Elementary School Diploma",
+      degree: "Sekolah Dasar",
       period: "2013 - 2019",
     },
     {
       institution: "SMP 2 Mejobo",
-      degree: "Junior High School Diploma",
+      degree: "Sekolah Menengah Pertama",
       period: "2019 - 2022",
     },
     {
       institution: "SMK 2 Kudus",
-      degree: "Vocational High School Diploma",
+      degree: "Sekolah Menengah Kejuruan",
       period: "2022 - 2025",
     },
   ];
@@ -37,7 +37,7 @@ const EduHistory = () => {
           viewport={{ once: true }}
           className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-wide leading-tight text-slate-900 dark:text-gray-200"
         >
-          Education History
+          Riwayat Pendidikan
         </motion.h2>
         <motion.div
           initial={{ y: 20, opacity: 0 }}

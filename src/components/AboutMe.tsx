@@ -2,11 +2,18 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { FaLaptopCode, FaGamepad, FaPalette, FaUsers } from "react-icons/fa";
+import {
+  FaLaptopCode,
+  FaGamepad,
+  FaPalette,
+  FaMusic,
+} from "react-icons/fa";
 
-const AboutMe = () => {
+const AboutMe = React.forwardRef((props, ref) => {
   return (
     <motion.section
+      id="tentang-saya"
+      ref={ref}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
@@ -21,7 +28,7 @@ const AboutMe = () => {
           viewport={{ once: true }}
           className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-wide leading-tight text-slate-900 dark:text-gray-200"
         >
-          About Me
+          Tentang Saya
         </motion.h2>
         <motion.p
           initial={{ y: 20, opacity: 0 }}
@@ -30,7 +37,11 @@ const AboutMe = () => {
           viewport={{ once: true }}
           className="text-base sm:text-lg md:text-xl text-slate-900 dark:text-gray-300"
         >
-          I am a passionate student who is always eager to learn and explore new technologies. My journey into the world of coding started at a young age, and I have been hooked ever since. I enjoy solving problems, creating applications, and constantly improving my skills. Outside of coding, I love playing video games, drawing, and spending time with my family and friends.
+          Saya bernama Ismail. Saat ini saya berusia 16 tahun. Saya menempuh
+          pendidikan di SMK Negeri 2 Kudus di kompetensi keahlian Teknik
+          Komputer dan Jaringan, saat ini saya masih duduk di bangku kelas XI
+          (Sebelas). Saya memiliki mimpi atau bercita-cita sebagai software
+          engineer.
         </motion.p>
         <div className="flex flex-wrap justify-center gap-6">
           <motion.div
@@ -70,8 +81,8 @@ const AboutMe = () => {
             viewport={{ once: true }}
             className="flex flex-col items-center space-y-2"
           >
-            <FaUsers className="text-4xl text-yellow-500" />
-            <p className="text-slate-900 dark:text-gray-300">Friends & Family</p>
+            <FaMusic className="text-4xl text-yellow-500" />
+            <p className="text-slate-900 dark:text-gray-300">Music</p>
           </motion.div>
         </div>
         <motion.p
@@ -81,11 +92,14 @@ const AboutMe = () => {
           viewport={{ once: true }}
           className="text-base sm:text-lg md:text-xl text-slate-900 dark:text-gray-300"
         >
-          My goal is to become a professional software engineer and contribute to meaningful projects that make a difference. I am excited about the future and the opportunities that lie ahead in the tech industry.
+          Tujuan saya adalah menjadi Software Engineer profesional dan
+          berkontribusi untuk project-project bermakna yang membuat perbedaan.
+          Saya bersemangat mengenai hal ini masa depan dan peluang yang ada di
+          masa depan dalam industri teknologi.
         </motion.p>
       </div>
     </motion.section>
   );
-};
+});
 
 export default AboutMe;

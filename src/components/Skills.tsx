@@ -93,7 +93,7 @@ const Skills = () => {
                   </h3>
                 </div>
                 <p className="text-gray-600 dark:text-gray-200">
-                  {`I have ${skill.skill.toLowerCase()} skills.`}
+                  {`Saya memiliki keterampilan ${skill.skill.toLowerCase()}.`}
                 </p>
                 <div className="bg-gray-300 rounded-full h-5 mt-4 relative overflow-hidden">
                   <div

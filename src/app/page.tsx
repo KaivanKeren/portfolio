@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import AboutMe from "@/components/AboutMe";
 import EduHistory from "@/components/EduHistory";
 import Footer from "@/components/Footer";
@@ -23,6 +23,8 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
 
+  const tentangSayaRef = useRef(null);
+
   return (
     <>
       {loading ? (
@@ -31,10 +33,10 @@ export default function Home() {
         <div className="bg-white dark:bg-slate-900">
           <Header />
           <div className="m-5 mt-4 mb-8">
-            <Hero />
+            <Hero scrollToRef={tentangSayaRef} />
           </div>
           <div className="mx-5 flex flex-col gap-6">
-            <AboutMe />
+            <AboutMe ref={tentangSayaRef} />
             <EduHistory />
           </div>
           <Skills />

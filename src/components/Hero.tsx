@@ -3,7 +3,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const Hero: React.FC = () => {
+const Hero = ({ scrollToRef }) => {
+  const scrollToSection = (ref) => {
+    window.scrollTo({
+      top: ref.current.offsetTop,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <>
       <motion.section
@@ -19,7 +26,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 1, delay: 0.5 }}
             className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-wide leading-tight text-white drop-shadow-lg dark:text-gray-200"
           >
-            I'm Ismail
+            Saya Ismail
           </motion.h1>
           <motion.h2
             initial={{ y: -50, opacity: 0 }}
@@ -27,7 +34,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 1, delay: 0.7 }}
             className="text-3xl sm:text-4xl md:text-4xl font-semibold text-white drop-shadow-md dark:text-gray-300"
           >
-            I love coding
+            Saya menyukai Coding
           </motion.h2>
           <motion.p
             initial={{ y: -20, opacity: 0 }}
@@ -35,8 +42,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 1, delay: 0.9 }}
             className="text-base sm:text-lg md:text-lg text-white drop-shadow-sm dark:text-gray-300"
           >
-            I am a 16 year old vocational school student and dream of becoming a
-            software engineer.
+            Saya seorang siswa sekolah kejuruan berusia 16 tahun dan bercita-cita menjadi seorang Software Engineer.
           </motion.p>
           <div className="space-x-4">
             <motion.button
@@ -46,10 +52,11 @@ const Hero: React.FC = () => {
               }}
               whileTap={{ scale: 0.95 }}
               className="bg-white text-indigo-600 hover:bg-indigo-100 transition duration-300 px-4 py-2 sm:px-6 sm:py-3 rounded-lg shadow-md dark:hover:text-indigo-400"
+              onClick={() => scrollToSection(scrollToRef)}
             >
-              My Portfolio
+              Tentang Saya
             </motion.button>
-            <a href="https://wa.me/6285338572860" target="\_blank">
+            <a href="https://wa.me/6285338572860" target="_blank" rel="noopener noreferrer">
               <motion.button
                 whileHover={{
                   scale: 1.05,
@@ -58,7 +65,7 @@ const Hero: React.FC = () => {
                 whileTap={{ scale: 0.95 }}
                 className="bg-transparent text-white border-white border-2 hover:text-indigo-600 hover:bg-white transition duration-300 px-4 py-2 sm:px-6 sm:py-3 rounded-lg shadow-md dark:border-gray-300 dark:hover:text-indigo-400 dark:hover:bg-white dark:hover:border-indigo-600"
               >
-                Contact Me
+                Hubungi saya
               </motion.button>
             </a>
           </div>

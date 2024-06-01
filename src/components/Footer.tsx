@@ -31,6 +31,14 @@ const Footer = () => {
             >
               <i className="fab fa-github fa-lg"></i>
             </a>
+            <a
+              href="https://tiktok.com/@ismailkds4"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-white transition-colors duration-300 mr-4"
+            >
+              <i className="fab fa-tiktok fa-lg"></i>
+            </a>
           </div>
         </motion.div>
       </div>

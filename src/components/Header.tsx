@@ -34,12 +34,22 @@ const Header: React.FC = () => {
       transition={{ duration: 0.5 }}
     >
       <motion.div
-        className="flex text-2xl font-bold ml-5 cursor-pointer"
+        className="flex text-2xl font-bold cursor-pointer"
         initial={{ y: -100, opacity: 0 }}
         whileTap={{ scale: 0.95 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 0.5 }}
       >
+        <motion.img
+          initial={{ y: -100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1.5, delay: 0.8 }}
+          src="/logo.png"
+          alt="Logo"
+          width={60}
+          height={60}
+          className="-mt-2 fill-gray-900"
+        />
         <motion.h1
           whileHover={{
             scale: 1.15,

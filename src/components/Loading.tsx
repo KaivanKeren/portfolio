@@ -1,5 +1,5 @@
 // components/Loading.js
-import { ClipLoader } from "react-spinners";
+import { FaReact } from "react-icons/fa";
 import DarkModeToggle from "./DarkModeToggle";
 
 export default function Loading() {
@@ -8,7 +8,7 @@ export default function Loading() {
       <div className="hidden">
         <DarkModeToggle />
       </div>
-      <ClipLoader color={"#123abc"} loading={true} size={50} />
+      <FaReact className="animate-spin-slow text-5xl text-blue-500" />
     </div>
   );
 }

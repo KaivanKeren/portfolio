@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
@@ -36,14 +36,18 @@ const Header: React.FC = () => {
       <motion.div
         className="flex text-2xl font-bold ml-5 cursor-pointer"
         initial={{ y: -100, opacity: 0 }}
-        whileHover={{
-          scale: 1.15,
-        }}
         whileTap={{ scale: 0.95 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 0.5 }}
       >
-        <span className="text-blue-500">ISM</span>AIL
+        <motion.h1
+          whileHover={{
+            scale: 1.15,
+          }}
+          transition={{ duration: 0.4 }}
+        >
+          <span className="text-blue-500">ISM</span>AIL
+        </motion.h1>
       </motion.div>
       <DarkModeToggle />
     </motion.header>

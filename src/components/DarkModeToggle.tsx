@@ -35,7 +35,7 @@ export default function DarkModeToggle() {
         {isDarkMode ? (
           <motion.svg
             whileHover={{
-              scale: 1.1,
+              scale: 1.15,
             }}
             key="dark"
             xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +54,7 @@ export default function DarkModeToggle() {
         ) : (
           <motion.svg
             whileHover={{
-              scale: 1.1,
+              scale: 1.15,
             }}
             key="light"
             xmlns="http://www.w3.org/2000/svg"

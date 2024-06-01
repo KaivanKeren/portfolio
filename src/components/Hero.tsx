@@ -68,7 +68,7 @@ const Hero: React.FC<HeroProps> = ({ scrollToRef }) => {
                 boxShadow: "0 0 20px rgba(0, 0, 0, 0.5)",
               }}
               whileTap={{ scale: 0.95 }}
-              className="bg-white text-indigo-600 mb-5 hover:bg-indigo-100 transition duration-300 px-4 py-2 sm:px-6 sm:py-3 rounded-lg shadow-md dark:hover:text-indigo-400"
+              className="bg-white text-indigo-600 mb-5 hover:bg-transparent hover:text-white hover:border-white border-2 transition duration-300 px-4 py-2 sm:px-6 sm:py-3 rounded-lg shadow-md dark:hover:text-white"
               onClick={() => scrollToSection(scrollToRef)}
             >
               Tentang Saya

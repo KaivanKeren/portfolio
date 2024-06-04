@@ -4,7 +4,7 @@ import DarkModeToggle from "./DarkModeToggle";
 
 export default function Loading() {
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-white dark:bg-slate-900 z-50">
+    <div className="fixed inset-0 flex items-center justify-center bg-light bg-light-pattern dark:bg-dark dark:bg-dark-pattern z-50">
       <div className="hidden">
         <DarkModeToggle />
       </div>

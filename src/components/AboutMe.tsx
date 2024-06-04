@@ -45,7 +45,7 @@ const AboutMe = React.forwardRef<HTMLElement>((props, ref) => {
      whileInView="visible"
      viewport={{ once: true }}
      variants={containerVariants}
-     className="flex flex-col items-center justify-center rounded-xl shadow-xl min-h-screen p-8 bg-gradient-to-r from-gray-200 to-sky-300 dark:from-slate-700 dark:to-sky-950 text-slate-900 dark:text-gray-200"
+     className="flex flex-col items-center justify-center rounded-xl shadow-xl min-h-screen p-8 bg-gradient-to-r from-gray-200/70 to-sky-300/70 dark:from-slate-700/70 dark:to-sky-950/70 text-slate-900 dark:text-gray-200"
    >
      <div className="w-full md:w-3/4 lg:w-1/2 p-8 space-y-8 text-center">
        <motion.h2

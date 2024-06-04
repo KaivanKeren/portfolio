@@ -54,7 +54,7 @@ const EduHistory = () => {
             <Link href={item.link} target="_blank">
             <div
               key={index}
-              className="bg-gray-100 dark:bg-slate-800 rounded-lg shadow-lg overflow-hidden transition duration-300 hover:scale-105 hover:shadow-xl"
+              className="bg-gray-100/70 dark:bg-slate-800/70 rounded-lg shadow-lg overflow-hidden transition duration-300 hover:scale-105 hover:shadow-xl"
             >
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-slate-900 dark:text-gray-200">

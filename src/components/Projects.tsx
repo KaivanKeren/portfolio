@@ -41,7 +41,7 @@ const Projects = () => {
       initial="hidden"
       animate={controls}
     >
-      <section className="bg-gradient-to-r from-slate-500 to-indigo-700 dark:from-slate-800 dark:to-indigo-900 rounded-t-[2rem] text-white py-16">
+      <section className="bg-gradient-to-r from-slate-500/70 to-indigo-700/70 dark:from-slate-800/70 dark:to-indigo-900/70 rounded-t-[2rem] text-white py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <motion.h2
@@ -61,7 +61,7 @@ const Projects = () => {
                 scale: 1.05,
                 boxShadow: "0 0 20px rgba(0, 0, 0, 0.5)",
               }}
-              className="bg-white dark:bg-slate-900 text-indigo-600 dark:text-indigo-400 p-8 rounded-lg shadow-md relative overflow-hidden group"
+              className="bg-white/70 dark:bg-slate-900/70 text-indigo-600 dark:text-indigo-400 p-8 rounded-lg shadow-md relative overflow-hidden group"
             >
               <a href="https://lulus.smkn2kudus.sch.id" target="_blank">
                 <img
@@ -83,7 +83,7 @@ const Projects = () => {
                 scale: 1.05,
                 boxShadow: "0 0 20px rgba(0, 0, 0, 0.5)",
               }}
-              className="bg-white dark:bg-slate-900 text-indigo-600 dark:text-indigo-400 p-8 rounded-lg shadow-md relative overflow-hidden group"
+              className="bg-white/70 dark:bg-slate-900/70 text-indigo-600 dark:text-indigo-400 p-8 rounded-lg shadow-md relative overflow-hidden group"
             >
               <a href="https://antrian.tkjsmkn2kudus.my.id" target="_blank">
                 <img
@@ -106,7 +106,7 @@ const Projects = () => {
                 scale: 1.05,
                 boxShadow: "0 0 20px rgba(0, 0, 0, 0.5)",
               }}
-              className="bg-white dark:bg-slate-900 text-indigo-600 dark:text-indigo-400 p-8 rounded-lg shadow-md relative overflow-hidden group"
+              className="bg-white/70 dark:bg-slate-900/70 text-indigo-600 dark:text-indigo-400 p-8 rounded-lg shadow-md relative overflow-hidden group"
             >
               <a href="https://bsdmart.tkjsmkn2kudus.my.id" target="_blank">
                 <img

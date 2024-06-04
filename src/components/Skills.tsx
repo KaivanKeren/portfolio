@@ -82,7 +82,7 @@ const Skills = () => {
                   scale: 1.05,
                   boxShadow: "0 0 20px rgba(0, 0, 0, 0.5)",
                 }}
-                className="bg-gray-200 dark:bg-slate-800 p-8 rounded-lg shadow-md group"
+                className="bg-gray-300/70 dark:bg-slate-800/70 p-8 rounded-lg shadow-md group"
               >
                 <div className="flex items-center mb-4">
                   <i className="inline-block mr-2 text-3xl dark:text-slate-300 text-slate-800">

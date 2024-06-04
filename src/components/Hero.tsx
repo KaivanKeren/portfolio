@@ -24,7 +24,7 @@ const Hero: React.FC<HeroProps> = ({ scrollToRef }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="flex flex-col md:flex-row items-center justify-center rounded-xl shadow-xl min-h-screen p-4 bg-gradient-to-r from-slate-500 to-indigo-700 dark:from-slate-800 dark:to-indigo-900 text-white dark:bg-slate-800"
+        className="flex flex-col md:flex-row items-center justify-center rounded-xl shadow-xl min-h-screen p-4 bg-gradient-to-r from-slate-500/70 to-indigo-700/70 dark:from-slate-800/70 dark:to-indigo-900/70 text-white dark:bg-slate-800/70"
       >
         <div className="md:w-1/2 p-8 space-y-6 text-center md:text-left">
           <motion.div

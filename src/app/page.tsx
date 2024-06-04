@@ -30,7 +30,7 @@ export default function Home() {
       {loading ? (
         <Loading />
       ) : (
-        <div className="bg-white dark:bg-slate-900">
+        <div className="bg-light bg-light-pattern dark:bg-dark dark:bg-dark-pattern">
           <Header />
           <div className="m-5 mt-4 mb-8">
             <Hero scrollToRef={tentangSayaRef} />

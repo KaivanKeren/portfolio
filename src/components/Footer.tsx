@@ -8,7 +8,7 @@ const Footer = () => {
   const { ref, inView } = useInView();
   
   return (
-    <footer className="bg-indigo-800 dark:bg-indigo-950 text-white py-8">
+    <footer className="bg-indigo-800 dark:bg-slate-950/50 text-white py-8">
       <div className="container mx-auto px-4">
         <motion.div
           ref={ref}

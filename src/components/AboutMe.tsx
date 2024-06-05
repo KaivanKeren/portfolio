@@ -45,7 +45,7 @@ const AboutMe = React.forwardRef<HTMLElement>((props, ref) => {
      whileInView="visible"
      viewport={{ once: true }}
      variants={containerVariants}
-     className="flex flex-col items-center justify-center rounded-xl shadow-xl min-h-screen p-8 bg-gradient-to-r from-gray-200/70 to-sky-300/70 dark:from-slate-700/70 dark:to-sky-950/70 text-slate-900 dark:text-gray-200"
+     className="flex flex-col items-center justify-center rounded-xl shadow-xl min-h-screen p-8 bg-gradient-to-r from-gray-400/50 to-sky-500/80 dark:from-slate-700/70 dark:to-sky-950/70 text-slate-900 dark:text-gray-200"
    >
      <div className="w-full md:w-3/4 lg:w-1/2 p-8 space-y-8 text-center">
        <motion.h2
@@ -76,21 +76,21 @@ const AboutMe = React.forwardRef<HTMLElement>((props, ref) => {
            variants={iconVariants}
            className="flex flex-col items-center space-y-2"
          >
-           <FaGamepad className="text-4xl text-green-500" />
+           <FaGamepad className="text-4xl text-green-600" />
            <p className="text-slate-900 dark:text-gray-300">Gaming</p>
          </motion.div>
          <motion.div
            variants={iconVariants}
            className="flex flex-col items-center space-y-2"
          >
-           <FaPalette className="text-4xl text-red-500" />
+           <FaPalette className="text-4xl text-red-600" />
            <p className="text-slate-900 dark:text-gray-300">Drawing</p>
          </motion.div>
          <motion.div
            variants={iconVariants}
            className="flex flex-col items-center space-y-2"
          >
-           <FaMusic className="text-4xl text-yellow-500" />
+           <FaMusic className="text-4xl text-yellow-600" />
            <p className="text-slate-900 dark:text-gray-300">Music</p>
          </motion.div>
        </div>

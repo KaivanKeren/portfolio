@@ -51,6 +51,7 @@ const Header: React.FC = () => {
           className="-mt-2 fill-gray-900"
         />
         <motion.h1
+          onClick={() => location.reload()}
           whileHover={{
             scale: 1.15,
           }}

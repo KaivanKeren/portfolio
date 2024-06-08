@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 
@@ -9,6 +9,27 @@ type HeroProps = {
 };
 
 const Hero: React.FC<HeroProps> = ({ scrollToRef }) => {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [isHovering, setIsHovering] = useState(false);
+
+  const handleMouseMove = (
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) => {
+    const rect = event.currentTarget.getBoundingClientRect();
+    setMousePosition({
+      x: event.clientX - rect.left,
+      y: event.clientY - rect.top,
+    });
+  };
+
+  const handleMouseEnter = () => {
+    setIsHovering(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovering(false);
+  };
+
   const scrollToSection = (ref: React.RefObject<HTMLElement>) => {
     if (ref.current) {
       window.scrollTo({
@@ -17,6 +38,15 @@ const Hero: React.FC<HeroProps> = ({ scrollToRef }) => {
       });
     }
   };
+
+  const gradientStyle = isHovering
+    ? {
+        background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255, 255, 255, 0.2), transparent 70%)`,
+        opacity: 1,
+      }
+    : {
+        opacity: 0,
+      };
 
   return (
     <>
@@ -33,7 +63,7 @@ const Hero: React.FC<HeroProps> = ({ scrollToRef }) => {
             transition={{ duration: 1, delay: 0.5 }}
             className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-wide leading-tight text-white drop-shadow-lg dark:text-gray-200"
           >
-            Saya 
+            Saya
             <Typewriter
               words={[" Ismail", " Siswa SMK"]}
               loop={false}
@@ -92,28 +122,22 @@ const Hero: React.FC<HeroProps> = ({ scrollToRef }) => {
           </div>
         </div>
         <motion.div
-          whileHover={{
-            scale: 1.01,
-            rotate: 1.6,
-            boxShadow: "0 10px 20px rgba(0, 0, 0, 0.3)", // Mengubah bayangan saat hover
-            filter: "brightness(1.2)", // Menambahkan efek pencerahan pada gambar saat hover
-          }}
           className="md:w-1/2 relative mt-8 md:mt-0"
+          onMouseMove={handleMouseMove}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
           <motion.img
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
-            src="/foto.jpg"
+            src="/foto2.png"
             alt="John Doe"
-            className="w-full h-auto object-cover rounded-lg shadow-xl"
+            className="w-full h-auto object-cover rounded-lg"
           />
-
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.5 }}
-            transition={{ duration: 1, delay: 0.5 }}
-            className="absolute inset-0 rounded-lg bg-gradient-to-r from-slate-900/50 to-sky-950/50"
+            style={gradientStyle}
+            className="absolute inset-0 rounded-lg pointer-events-none"
           />
         </motion.div>
       </motion.section>

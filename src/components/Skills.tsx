@@ -3,8 +3,11 @@ import React from "react";
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 import {
+  SiAdobeillustrator,
+  SiAdobephotoshop,
   SiHtml5,
   SiLaravel,
+  SiMysql,
   SiNodedotjs,
   SiReact,
   SiTailwindcss,
@@ -48,6 +51,9 @@ const Skills = () => {
     { skill: "Laravel", level: "75%", logo: <SiLaravel /> },
     { skill: "Tailwind CSS", level: "70%", logo: <SiTailwindcss /> },
     { skill: "Vue JS", level: "50%", logo: <SiVuedotjs /> },
+    { skill: "MySQL", level: "75%", logo: <SiMysql /> },
+    { skill: "Photoshop", level: "70%", logo: <SiAdobephotoshop /> },
+    { skill: "Illustrator", level: "65%", logo: <SiAdobeillustrator /> },
   ];
 
   return (

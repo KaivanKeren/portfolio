@@ -132,7 +132,7 @@ const Hero: React.FC<HeroProps> = ({ scrollToRef }) => {
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
             src="/foto2.png"
-            alt="John Doe"
+            alt="Ismail"
             className="w-full h-auto object-cover rounded-lg"
           />
           <motion.div

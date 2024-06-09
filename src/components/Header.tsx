@@ -41,7 +41,6 @@ const Header: React.FC = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 0.5 }}
       >
-        <Link href="/login">
           <motion.img
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -52,7 +51,6 @@ const Header: React.FC = () => {
             height={60}
             className="-mt-2 fill-gray-900"
           />
-        </Link>
         <motion.h1
           onClick={() => location.reload()}
           whileHover={{

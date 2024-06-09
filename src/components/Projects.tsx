@@ -51,7 +51,7 @@ const Projects = () => {
               Project Saya
             </motion.h2>
             <motion.p variants={cardVariants} className="text-gray-200">
-              Lihat beberapa proyek terbaru saya.
+              Lihat beberapa project terbaru saya.
             </motion.p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

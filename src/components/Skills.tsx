@@ -95,15 +95,15 @@ const Skills = () => {
                 <p className="text-gray-600 dark:text-gray-200">
                   {`Saya memiliki keterampilan ${skill.skill.toLowerCase()}.`}
                 </p>
-                <div className="bg-gray-300 rounded-full h-5 mt-4 relative overflow-hidden">
+                <div className="bg-gray-300 rounded-full h-[1.15rem] mt-4 relative overflow-hidden">
                   <div
-                    className="bg-gradient-to-r from-indigo-500 to-indigo-700 h-full rounded-full"
+                    className="bg-gradient-to-r from-indigo-300 to-slate-500 dark:from-indigo-500 dark:to-slate-700 h-full rounded-full"
                     style={{
                       width: skill.level,
                       transition: "width 1s ease-in-out",
                     }}
                   ></div>
-                  <span className="absolute right-0 top-0 text-sm text-white px-2 bg-indigo-600 rounded opacity-0 group-hover:opacity-100 group-hover:scale-110 group-hover:bg-indigo-500 transition-all duration-300">
+                  <span className="absolute right-0 top-0 text-sm text-white px-2 dark:bg-slate-600 bg-indigo-500 rounded opacity-0 group-hover:opacity-100 group-hover:scale-110 group-hover:dark:bg-slate-600 group-hover:bg--600 transition-all duration-300">
                     {skill.level}
                   </span>
                 </div>

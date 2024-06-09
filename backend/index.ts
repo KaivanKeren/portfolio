@@ -1,4 +1,5 @@
 import app from "./app";
+import Bun from "bun"
 
 Bun.serve({
   fetch: app.fetch,

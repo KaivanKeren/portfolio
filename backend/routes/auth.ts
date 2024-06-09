@@ -29,7 +29,6 @@ const createToken = (user: any) => {
   );
 };
 
-// Login endpoint
 authRoute.post(
   '/login',
   zValidator('json', userSchema),

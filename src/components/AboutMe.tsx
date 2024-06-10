@@ -2,12 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  FaLaptopCode,
-  FaGamepad,
-  FaPalette,
-  FaMusic,
-} from "react-icons/fa";
+import { FaLaptopCode, FaGamepad, FaPalette, FaMusic } from "react-icons/fa";
 
 const AboutMe = React.forwardRef<HTMLElement>((props, ref) => {
   const containerVariants = {
@@ -64,11 +59,11 @@ const AboutMe = React.forwardRef<HTMLElement>((props, ref) => {
             variants={childVariants}
             className="text-base sm:text-lg md:text-xl text-slate-900 dark:text-gray-300"
           >
-            Saya bernama Ismail. Saat ini saya berusia 16 tahun. Saya menempuh
-            pendidikan di SMK Negeri 2 Kudus di kompetensi keahlian Teknik
-            Komputer dan Jaringan, saat ini saya masih duduk di bangku kelas XI
-            (Sebelas). Saya memiliki mimpi atau bercita-cita sebagai software
-            engineer.
+            Saya adalah seorang siswa berusia 16 tahun yang saat ini bersekolah
+            di SMKN 2 Kudus. Saya memiliki minat yang kuat di bidang pemrograman
+            dan selalu berusaha mengasah keterampilan saya dalam berbagai bahasa
+            pemrograman dan teknologi. Saya memiliki mimpi atau bercita-cita
+            sebagai software engineer.
           </motion.p>
 
           <motion.h3

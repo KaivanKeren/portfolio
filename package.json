@@ -24,6 +24,7 @@
     "react-dom": "^18",
     "react-icons": "^5.2.1",
     "react-intersection-observer": "^9.10.2",
+    "react-medium-image-zoom": "^5.2.4",
     "react-simple-typewriter": "^5.0.1",
     "react-spinners": "^0.13.8"
   },

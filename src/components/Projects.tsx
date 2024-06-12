@@ -3,6 +3,8 @@
 import React from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 
 const Projects = () => {
   const controls = useAnimation();
@@ -63,14 +65,18 @@ const Projects = () => {
               }}
               className="bg-white/70 dark:bg-slate-900/70 text-indigo-600 dark:text-indigo-400 p-8 rounded-lg shadow-md relative overflow-hidden group"
             >
-              <a href="https://lulus.smkn2kudus.sch.id" target="_blank">
+              <Zoom>
                 <img
                   src="/Project1.png"
                   alt="Project 1"
                   className="w-full h-48 object-cover rounded-lg mb-4 transition duration-300 hover:scale-105"
                 />
+              </Zoom>
+              <a href="https://lulus.smkn2kudus.sch.id" target="_blank">
+                <h3 className="text-2xl font-bold mb-4">
+                  Pengumuman Kelulusan
+                </h3>
               </a>
-              <h3 className="text-2xl font-bold mb-4">Pengumuman Kelulusan</h3>
               <p className="text-gray-600 dark:text-gray-200 mb-4">
                 Website pengumuman kelulusan siswa kelas 12 di SMKN 2 Kudus.
               </p>
@@ -85,14 +91,16 @@ const Projects = () => {
               }}
               className="bg-white/70 dark:bg-slate-900/70 text-indigo-600 dark:text-indigo-400 p-8 rounded-lg shadow-md relative overflow-hidden group"
             >
-              <a href="https://antrian.tkjsmkn2kudus.my.id" target="_blank">
+              <Zoom>
                 <img
                   src="/Project2.png"
                   alt="Project 2"
                   className="w-full h-48 object-cover rounded-lg mb-4 transition duration-300 hover:scale-105"
                 />
+              </Zoom>
+              <a href="https://antrian.tkjsmkn2kudus.my.id" target="_blank">
+                <h3 className="text-2xl font-bold mb-4">Antrian PPDB Siswa</h3>
               </a>
-              <h3 className="text-2xl font-bold mb-4">Antrian PPDB Siswa</h3>
               <p className="text-gray-600 dark:text-gray-200 mb-4">
                 Website pengambilan antrian pendaftaran peserta didik baru di
                 SMKN 2 Kudus.
@@ -108,14 +116,16 @@ const Projects = () => {
               }}
               className="bg-white/70 dark:bg-slate-900/70 text-indigo-600 dark:text-indigo-400 p-8 rounded-lg shadow-md relative overflow-hidden group"
             >
-              <a href="https://bsdmart.tkjsmkn2kudus.my.id" target="_blank">
+              <Zoom>
                 <img
                   src="/Project3.png"
                   alt="Project 3"
                   className="w-full h-48 object-cover rounded-lg mb-4 transition duration-300 hover:scale-105"
                 />
+              </Zoom>
+              <a href="https://bsdmart.tkjsmkn2kudus.my.id" target="_blank">
+                <h3 className="text-2xl font-bold mb-4">BSD Mart</h3>
               </a>
-              <h3 className="text-2xl font-bold mb-4">BSD Mart</h3>
               <p className="text-gray-600 dark:text-gray-200 mb-4">
                 Aplikasi bank sampah digital berbasis website yang akan
                 dipertandingkan di Krenova, Kabupaten Kudus pada tahun 2024.

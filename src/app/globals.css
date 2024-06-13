@@ -25,3 +25,31 @@
     radial-gradient(at 50% 0%, hsla(225, 100%, 85%, 1) 0, transparent 50%),
     radial-gradient(at 100% 0%, hsla(339, 100%, 85%, 1) 0, transparent 50%);
 }
+
+/* Scrollbar keseluruhan */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track scrollbar */
+::-webkit-scrollbar-track {
+  background-color: #1a1a1a; /* Warna latar belakang track */
+  border-radius: 6px; /* Membuat sudut track menjadi sedikit bulat */
+}
+
+/* Thumb scrollbar */
+::-webkit-scrollbar-thumb {
+  border-radius: 6px; /* Membuat sudut thumb scrollbar menjadi sedikit bulat */
+  background: linear-gradient(to bottom, #7359e7, #120069); /* Gradien warna thumb scrollbar */
+  border: 2px solid #2e2e2e; /* Garis pinggiran thumb scrollbar */
+}
+
+/* Hover state untuk thumb scrollbar */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #8d5fff, #060193); /* Gradien warna thumb scrollbar saat dihover */
+}
+
+/* Active state untuk thumb scrollbar */
+::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(to bottom, #7c72ff, #0010c2); /* Gradien warna thumb scrollbar saat ditekan */
+}

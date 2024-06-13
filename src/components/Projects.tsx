@@ -5,6 +5,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
+import Link from "next/link";
 
 const Projects = () => {
   const controls = useAnimation();
@@ -133,6 +134,11 @@ const Projects = () => {
               <div className="absolute bottom-0 left-0 w-full bg-gradient-to-r from-indigo-500 to-purple-500 h-1 transform -translate-y-full group-hover:translate-y-0 transition duration-500"></div>
             </motion.div>
           </div>
+          <Link href="/projects">
+            <motion.div whileHover={{scale: 1.01}} className="flex justify-end mt-5 hover:text-blue-200">
+              <h1>Lihat Project Lainnya →</h1>
+            </motion.div>
+          </Link>
         </div>
       </section>
     </motion.div>

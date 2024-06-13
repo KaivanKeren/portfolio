@@ -41,25 +41,26 @@ const Header: React.FC = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 0.5 }}
       >
-          <motion.img
-            initial={{ y: -100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1.5, delay: 0.8 }}
-            src="/logo.png"
-            alt="Logo"
-            width={60}
-            height={60}
-            className="-mt-2 fill-gray-900"
-          />
-        <motion.h1
-          onClick={() => location.reload()}
-          whileHover={{
-            scale: 1.15,
-          }}
-          transition={{ duration: 0.4 }}
-        >
-          <span className="text-blue-500">ISM</span>AIL
-        </motion.h1>
+        <motion.img
+          initial={{ y: -100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1.5, delay: 0.8 }}
+          src="/logo.png"
+          alt="Logo"
+          width={60}
+          height={60}
+          className="-mt-2 fill-gray-900"
+        />
+        <Link href="/">
+          <motion.h1
+            whileHover={{
+              scale: 1.15,
+            }}
+            transition={{ duration: 0.4 }}
+          >
+            <span className="text-blue-500">ISM</span>AIL
+          </motion.h1>
+        </Link>
       </motion.div>
       <DarkModeToggle />
     </motion.header>

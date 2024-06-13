@@ -128,7 +128,7 @@ const Projects = () => {
                 <h3 className="text-2xl font-bold mb-4">BSD Mart</h3>
               </a>
               <p className="text-gray-600 dark:text-gray-200 mb-4">
-                Aplikasi bank sampah digital berbasis website yang akan
+                Aplikasi bank sampah digital berbasis website yang
                 dipertandingkan di Krenova, Kabupaten Kudus pada tahun 2024.
               </p>
               <div className="absolute bottom-0 left-0 w-full bg-gradient-to-r from-indigo-500 to-purple-500 h-1 transform -translate-y-full group-hover:translate-y-0 transition duration-500"></div>

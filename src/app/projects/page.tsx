@@ -99,7 +99,7 @@ const page = () => {
                     imgSrc: "/Project3.png",
                     title: "BSD Mart",
                     description:
-                      "Aplikasi bank sampah digital berbasis website yang akan dipertandingkan di Krenova, Kabupaten Kudus pada tahun 2024.",
+                      "Aplikasi bank sampah digital berbasis website yang dipertandingkan di Krenova, Kabupaten Kudus pada tahun 2024.",
                     link: "https://bsdmart.tkjsmkn2kudus.my.id",
                   },
                   {
@@ -113,7 +113,7 @@ const page = () => {
                     imgSrc: "/Project5.png",
                     title: "Mahabharata War",
                     description:
-                      "Project game pertama saya tentang perang Mahabharata, yang akan dipertandingkan di GKGS 2023.",
+                      "Project game pertama saya tentang perang Mahabharata, yang dipertandingkan di GKGS 2023.",
                     link: "https://kaivankeren.itch.io/mahabharata",
                   },
                 ].map((project, index) => (

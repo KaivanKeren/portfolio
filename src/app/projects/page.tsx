@@ -70,7 +70,7 @@ const page = () => {
                   variants={cardVariants}
                   className="text-4xl font-bold mb-4"
                 >
-                  Project
+                  Projects
                 </motion.h2>
                 <motion.p
                   variants={cardVariants}
@@ -115,6 +115,20 @@ const page = () => {
                     description:
                       "Project game pertama saya tentang perang Mahabharata, yang dipertandingkan di GKGS 2023.",
                     link: "https://kaivankeren.itch.io/mahabharata",
+                  },
+                  {
+                    imgSrc: "/Project6.png",
+                    title: "List Belanja",
+                    description:
+                      "Belajar membuat website list belanja menggunakan HTML, CSS dan framework Vue JS.",
+                    link: "https://github.com/KaivanKeren/List-Belanja",
+                  },
+                  {
+                    imgSrc: "/Project7.png",
+                    title: "M-Bot",
+                    description:
+                      "Project pertama saya menggunakan HTML, CSS, dan JS.",
+                    link: "https://github.com/KaivanKeren/Project-Pertama-JS",
                   },
                 ].map((project, index) => (
                   <motion.div

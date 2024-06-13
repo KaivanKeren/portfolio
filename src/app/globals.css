@@ -34,7 +34,6 @@
 /* Track scrollbar */
 ::-webkit-scrollbar-track {
   background-color: #1a1a1a; /* Warna latar belakang track */
-  border-radius: 6px; /* Membuat sudut track menjadi sedikit bulat */
 }
 
 /* Thumb scrollbar */

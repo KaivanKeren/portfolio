@@ -63,7 +63,7 @@ const page = () => {
           layout
         >
           <Header />
-          <section className="bg-light bg-light-pattern dark:bg-dark dark:bg-dark-pattern dark:text-white py-16">
+          <section className="dark:text-white py-16">
             <div className="container mx-auto px-4">
               <div className="text-center mb-12">
                 <motion.h2

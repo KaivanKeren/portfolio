@@ -57,15 +57,23 @@ const Hero: React.FC<HeroProps> = ({ scrollToRef }) => {
         className="flex flex-col md:flex-row items-center justify-center rounded-xl shadow-xl min-h-screen p-4 bg-gradient-to-r from-slate-500/70 to-indigo-700/70 dark:from-slate-800/70 dark:to-indigo-900/70 text-white dark:bg-slate-800/70"
       >
         <div className="md:w-1/2 p-8 space-y-6 text-center md:text-left">
+        <motion.h2
+            initial={{ y: -50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            className="text-3xl sm:text-4xl md:text-4xl font-semibold text-white drop-shadow-md dark:text-gray-300"
+          >
+            Halo,
+          </motion.h2>
           <motion.div
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
+            transition={{ duration: 1, delay: 0.7 }}
             className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-wide leading-tight text-white drop-shadow-lg dark:text-gray-200"
           >
             Saya
             <Typewriter
-              words={[" Ismail", " Siswa SMK"]}
+              words={[" Ismail", " Siswa SMK", " Programmer"]}
               loop={false}
               cursor
               cursorStyle="|"
@@ -74,21 +82,13 @@ const Hero: React.FC<HeroProps> = ({ scrollToRef }) => {
               delaySpeed={1500}
             />
           </motion.div>
-          <motion.h2
-            initial={{ y: -50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.7 }}
-            className="text-3xl sm:text-4xl md:text-4xl font-semibold text-white drop-shadow-md dark:text-gray-300"
-          >
-            Saya menyukai Coding
-          </motion.h2>
           <motion.p
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.9 }}
             className="text-base sm:text-lg md:text-lg text-white drop-shadow-sm dark:text-gray-300"
           >
-            Saya seorang siswa sekolah kejuruan berusia 16 tahun dan
+            Seorang siswa SMK berusia 16 tahun yang
             bercita-cita menjadi seorang Software Engineer.
           </motion.p>
           <div className="space-x-4">

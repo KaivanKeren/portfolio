@@ -46,9 +46,9 @@ const AboutMe = React.forwardRef<HTMLElement>((props, ref) => {
         whileInView="visible"
         viewport={{ once: true }}
         variants={containerVariants}
-        className="flex flex-col items-center justify-center rounded-xl shadow-xl min-h-screen p-8 bg-gradient-to-r from-gray-400/50 to-sky-500/80 dark:from-slate-700/70 dark:to-sky-950/70 text-slate-900 dark:text-gray-200"
+        className="flex flex-col items-center justify-center rounded-xl shadow-xl min-h-[80vh] p-2 bg-gradient-to-r from-gray-400/50 to-sky-500/80 dark:from-slate-700/70 dark:to-sky-950/70 text-slate-900 dark:text-gray-200"
       >
-        <div className="w-full md:w-3/4 lg:w-1/2 p-8 space-y-8 text-center">
+        <div className="w-full md:w-3/4 lg:w-1/2 p-2 space-y-8 text-center">
           <motion.h2
             variants={childVariants}
             className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-wide leading-tight text-slate-900 dark:text-gray-200"
@@ -103,16 +103,6 @@ const AboutMe = React.forwardRef<HTMLElement>((props, ref) => {
               <p className="text-slate-900 dark:text-gray-300">Music</p>
             </motion.div>
           </div>
-
-          <motion.p
-            variants={childVariants}
-            className="text-base sm:text-lg md:text-xl text-slate-900 dark:text-gray-300"
-          >
-            Tujuan saya adalah menjadi Software Engineer profesional dan
-            berkontribusi untuk project-project bermakna yang membuat perbedaan.
-            Saya bersemangat mengenai hal ini masa depan dan peluang yang ada di
-            masa depan dalam industri teknologi.
-          </motion.p>
         </div>
       </motion.section>
     </>

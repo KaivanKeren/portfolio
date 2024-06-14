@@ -45,7 +45,7 @@ const Achievement = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       variants={containerVariants}
-      className="flex flex-col items-center justify-center rounded-xl shadow-xl min-h-screen p-8 bg-gradient-to-r from-green-400/50 to-blue-500/80 dark:from-green-700/70 dark:to-blue-950/70 text-slate-900 dark:text-gray-200"
+      className="flex flex-col items-center justify-center rounded-xl shadow-xl min-h-[90vh] p-8 bg-gradient-to-r from-green-400/50 to-blue-500/80 dark:from-green-700/70 dark:to-blue-950/70 text-slate-900 dark:text-gray-200"
     >
       <div className="w-full md:w-3/4 lg:w-1/2 p-8 space-y-8 text-center">
         <motion.h2

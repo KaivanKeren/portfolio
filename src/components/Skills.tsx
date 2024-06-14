@@ -5,10 +5,17 @@ import { motion, useAnimation } from "framer-motion";
 import {
   SiAdobeillustrator,
   SiAdobephotoshop,
+  SiBootstrap,
+  SiBun,
+  SiConstruct3,
+  SiCss3,
   SiHtml5,
+  SiJavascript,
   SiLaravel,
   SiMysql,
+  SiNextdotjs,
   SiNodedotjs,
+  SiPython,
   SiReact,
   SiTailwindcss,
   SiVuedotjs,
@@ -45,15 +52,20 @@ const Skills = () => {
   };
 
   const skillBars = [
-    { skill: "Web Development", level: "80%", logo: <SiHtml5 /> },
-    { skill: "React JS", level: "60%", logo: <SiReact /> },
-    { skill: "Node JS", level: "70%", logo: <SiNodedotjs /> },
-    { skill: "Laravel", level: "75%", logo: <SiLaravel /> },
-    { skill: "Tailwind CSS", level: "70%", logo: <SiTailwindcss /> },
-    { skill: "Vue JS", level: "50%", logo: <SiVuedotjs /> },
-    { skill: "MySQL", level: "75%", logo: <SiMysql /> },
-    { skill: "Photoshop", level: "70%", logo: <SiAdobephotoshop /> },
-    { skill: "Illustrator", level: "65%", logo: <SiAdobeillustrator /> },
+    { skill: "HTML", logo: <SiHtml5 /> },
+    { skill: "CSS", logo: <SiCss3 /> },
+    { skill: "JS", logo: <SiJavascript /> },
+    { skill: "Python", logo: <SiPython /> },
+    { skill: "React JS", logo: <SiReact /> },
+    { skill: "Node JS", logo: <SiNodedotjs /> },
+    { skill: "Laravel", logo: <SiLaravel /> },
+    { skill: "Tailwind CSS", logo: <SiTailwindcss /> },
+    { skill: "Bootstrap", logo: <SiBootstrap /> },
+    { skill: "Vue JS", logo: <SiVuedotjs /> },
+    { skill: "MySQL", logo: <SiMysql /> },
+    { skill: "Next JS", logo: <SiNextdotjs /> },
+    { skill: "Bun JS", logo: <SiBun /> },
+    { skill: "Construct 3", logo: <SiConstruct3 /> },
   ];
 
   return (
@@ -79,7 +91,7 @@ const Skills = () => {
               Berikut adalah beberapa keterampilan yang saya peroleh selama lebih dari satu tahun belajar.
             </motion.p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
             {skillBars.map((skill, index) => (
               <motion.div
                 key={index}
@@ -88,30 +100,15 @@ const Skills = () => {
                   scale: 1.05,
                   boxShadow: "0 0 20px rgba(0, 0, 0, 0.5)",
                 }}
-                className="bg-gray-300/60 dark:bg-slate-800/70 p-8 rounded-lg shadow-md group"
+                className="bg-gray-300/60 dark:bg-slate-800/70 p-3 rounded-lg shadow-md group"
               >
                 <div className="flex items-center mb-4">
-                  <i className="inline-block mr-2 text-3xl dark:text-slate-300 text-slate-800">
+                  <i className="inline-block mr-2 text-2xl dark:text-slate-300 text-slate-800">
                     {skill.logo}
                   </i>
                   <h3 className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">
                     {skill.skill}
                   </h3>
-                </div>
-                <p className="text-gray-600 dark:text-gray-200">
-                  {`Saya memiliki keterampilan ${skill.skill.toLowerCase()}.`}
-                </p>
-                <div className="bg-gray-300 rounded-full h-[1.15rem] mt-4 relative overflow-hidden">
-                  <div
-                    className="bg-gradient-to-r from-indigo-300 to-slate-500 dark:from-indigo-500 dark:to-slate-700 h-full rounded-full"
-                    style={{
-                      width: skill.level,
-                      transition: "width 1s ease-in-out",
-                    }}
-                  ></div>
-                  <span className="absolute right-0 top-0 text-sm text-white px-2 dark:bg-slate-600 bg-indigo-500 rounded opacity-0 group-hover:opacity-100 group-hover:scale-110 group-hover:dark:bg-slate-600 group-hover:bg--600 transition-all duration-300">
-                    {skill.level}
-                  </span>
                 </div>
               </motion.div>
             ))}

@@ -72,6 +72,7 @@ const Skills = () => {
 
   return (
     <motion.div
+      id="keterampilan"
       ref={skillsRef}
       variants={skillsVariants}
       initial="hidden"
@@ -90,7 +91,8 @@ const Skills = () => {
               variants={cardVariants}
               className="text-gray-600 dark:text-gray-200"
             >
-              Berikut adalah beberapa keterampilan yang saya peroleh selama lebih dari satu tahun belajar.
+              Berikut adalah beberapa keterampilan yang saya peroleh selama
+              lebih dari satu tahun belajar.
             </motion.p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8">

@@ -34,7 +34,7 @@ export default function Home() {
         <div className="bg-light bg-light-pattern dark:bg-dark dark:bg-dark-pattern scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-100">
           <Header />
           <div className="m-5 mt-4 mb-8">
-            <Hero scrollToRef={tentangSayaRef} />
+            <Hero />
           </div>
           <div className="mx-5 flex flex-col gap-6">
             <AboutMe ref={tentangSayaRef} />

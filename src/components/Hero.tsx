@@ -3,12 +3,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
+import Link from "next/link";
 
-type HeroProps = {
-  scrollToRef: React.RefObject<HTMLElement>;
-};
-
-const Hero: React.FC<HeroProps> = ({ scrollToRef }) => {
+const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
   const cursorRef = useRef<HTMLDivElement | null>(null);
@@ -26,7 +23,9 @@ const Hero: React.FC<HeroProps> = ({ scrollToRef }) => {
     };
   }, []);
 
-  const handleMouseMove = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+  const handleMouseMove = (
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) => {
     const rect = event.currentTarget.getBoundingClientRect();
     setMousePosition({
       x: event.clientX - rect.left,
@@ -107,21 +106,22 @@ const Hero: React.FC<HeroProps> = ({ scrollToRef }) => {
             transition={{ duration: 1, delay: 0.9 }}
             className="text-base sm:text-lg md:text-lg text-white drop-shadow-sm dark:text-gray-300"
           >
-            Seorang siswa SMK berusia 16 tahun yang
-            bercita-cita menjadi seorang Software Engineer.
+            Seorang siswa SMK berusia 16 tahun yang bercita-cita menjadi seorang
+            Software Engineer.
           </motion.p>
           <div className="space-x-4">
-            <motion.button
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 0 20px rgba(0, 0, 0, 0.5)",
-              }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-white text-indigo-600 mb-5 hover:bg-transparent hover:text-white hover:border-white border-2 transition duration-300 px-4 py-2 sm:px-6 sm:py-3 rounded-lg shadow-md dark:hover:text-white"
-              onClick={() => scrollToSection(scrollToRef)}
-            >
-              Tentang Saya
-            </motion.button>
+            <Link href="#tentang-saya">
+              <motion.button
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 0 20px rgba(0, 0, 0, 0.5)",
+                }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-white text-indigo-600 mb-5 hover:bg-transparent hover:text-white hover:border-white border-2 transition duration-300 px-4 py-2 sm:px-6 sm:py-3 rounded-lg shadow-md dark:hover:text-white"
+              >
+                Tentang Saya
+              </motion.button>
+            </Link>
             <a
               href="https://wa.me/6285338572860"
               target="_blank"

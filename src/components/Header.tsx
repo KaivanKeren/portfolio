@@ -4,20 +4,18 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import DarkModeToggle from "./DarkModeToggle";
 import Link from "next/link";
+import BurgerMenu from "./BurgerMenu";
 
 const Header: React.FC = () => {
   const [isHeaderFixed, setIsHeaderFixed] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      // Atur isHeaderFixed berdasarkan posisi scroll
       setIsHeaderFixed(window.scrollY > 0);
     };
 
-    // Tambahkan event listener untuk mendengarkan scroll
     window.addEventListener("scroll", handleScroll);
 
-    // Membersihkan event listener setelah komponen dilepas
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -62,6 +60,24 @@ const Header: React.FC = () => {
           </motion.h1>
         </Link>
       </motion.div>
+      <nav className="hidden md:flex space-x-8">
+        <Link href="#tentang-saya">
+          <h3 className="hover:text-blue-500 transition duration-300">Tentang Saya</h3>
+        </Link>
+        <Link href="#pencapaian">
+          <h3 className="hover:text-blue-500 transition duration-300">Pencapaian</h3>
+        </Link>
+        <Link href="#riwayat-pendidikan">
+          <h3 className="hover:text-blue-500 transition duration-300">Riwayat Pendidikan</h3>
+        </Link>
+        <Link href="#keterampilan">
+          <h3 className="hover:text-blue-500 transition duration-300">Keterampilan</h3>
+        </Link>
+        <Link href="#project">
+          <h3 className="hover:text-blue-500 transition duration-300">Project</h3>
+        </Link>
+      </nav>
+      <BurgerMenu />
       <DarkModeToggle />
     </motion.header>
   );

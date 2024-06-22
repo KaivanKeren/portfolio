@@ -27,6 +27,7 @@ const EduHistory = () => {
 
   return (
     <motion.section
+      id="riwayat-pendidikan"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
@@ -52,23 +53,23 @@ const EduHistory = () => {
         >
           {educationData.map((item, index) => (
             <Link href={item.link} target="_blank">
-            <div
-              key={index}
-              className="bg-gray-100/70 dark:bg-slate-800/70 rounded-lg shadow-lg overflow-hidden transition duration-300 hover:scale-105 hover:shadow-xl"
-            >
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-slate-900 dark:text-gray-200">
-                  {item.institution}
-                </h3>
-                <p className="text-base text-slate-700 dark:text-gray-300">
-                  {item.degree}
-                </p>
-                <p className="text-sm text-slate-500 dark:text-gray-400">
-                  {item.period}
-                </p>
+              <div
+                key={index}
+                className="bg-gray-100/70 dark:bg-slate-800/70 rounded-lg shadow-lg overflow-hidden transition duration-300 hover:scale-105 hover:shadow-xl"
+              >
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-slate-900 dark:text-gray-200">
+                    {item.institution}
+                  </h3>
+                  <p className="text-base text-slate-700 dark:text-gray-300">
+                    {item.degree}
+                  </p>
+                  <p className="text-sm text-slate-500 dark:text-gray-400">
+                    {item.period}
+                  </p>
+                </div>
+                <div className="bg-gradient-to-r from-sky-400 to-blue-600 h-1"></div>
               </div>
-              <div className="bg-gradient-to-r from-sky-400 to-blue-600 h-1"></div>
-            </div>
             </Link>
           ))}
         </motion.div>

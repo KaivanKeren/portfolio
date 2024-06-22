@@ -39,6 +39,7 @@ const Projects = () => {
 
   return (
     <motion.div
+    id="project"
       ref={projectsRef}
       variants={projectsVariants}
       initial="hidden"

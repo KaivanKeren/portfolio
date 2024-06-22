@@ -84,6 +84,13 @@ const page = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   {[
                     {
+                      imgSrc: "/Project8.png",
+                      title: "ZNMMIC",
+                      description:
+                        "Website UMKM yang menawarkan layanan desain kustom menggunakan vektor.",
+                      link: "https://znmmic.vercel.app",
+                    },
+                    {
                       imgSrc: "/Project1.png",
                       title: "Pengumuman Kelulusan",
                       description:
@@ -101,7 +108,7 @@ const page = () => {
                       imgSrc: "/Project3.png",
                       title: "BSD Mart",
                       description:
-                        "Aplikasi bank sampah digital berbasis website yang dipertandingkan di Krenova, Kabupaten Kudus pada tahun 2024.",
+                        "Aplikasi bank sampah digital berbasis website.",
                       link: "https://bsdmart.tkjsmkn2kudus.my.id",
                     },
                     {
@@ -115,7 +122,7 @@ const page = () => {
                       imgSrc: "/Project5.png",
                       title: "Mahabharata War",
                       description:
-                        "Project game pertama saya tentang perang Mahabharata, yang dipertandingkan di GKGS 2023.",
+                        "Project game pertama saya tentang perang Mahabharata.",
                       link: "https://kaivankeren.itch.io/mahabharata",
                     },
                     {

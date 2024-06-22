@@ -68,6 +68,30 @@ const Projects = () => {
             >
               <Zoom>
                 <img
+                  src="/Project8.png"
+                  alt="Project 6"
+                  className="w-full h-48 object-cover rounded-lg mb-4 transition duration-300 hover:scale-105"
+                />
+              </Zoom>
+              <a href="https://znmmic.vercel.app" target="_blank">
+                <h3 className="text-2xl font-bold mb-4">ZNMMIC</h3>
+              </a>
+              <p className="text-gray-600 dark:text-gray-200 mb-4">
+                Website UMKM yang menawarkan layanan desain kustom menggunakan
+                vektor.
+              </p>
+              <div className="absolute bottom-0 left-0 w-full bg-gradient-to-r from-indigo-500 to-purple-500 h-1 transform -translate-y-full group-hover:translate-y-0 transition duration-500"></div>
+            </motion.div>
+            <motion.div
+              variants={cardVariants}
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 0 20px rgba(0, 0, 0, 0.5)",
+              }}
+              className="bg-white/70 dark:bg-slate-900/70 text-indigo-600 dark:text-indigo-400 p-8 rounded-lg shadow-md relative overflow-hidden group"
+            >
+              <Zoom>
+                <img
                   src="/Project1.png"
                   alt="Project 1"
                   className="w-full h-48 object-cover rounded-lg mb-4 transition duration-300 hover:scale-105"
@@ -108,37 +132,14 @@ const Projects = () => {
               </p>
               <div className="absolute bottom-0 left-0 w-full bg-gradient-to-r from-indigo-500 to-purple-500 h-1 transform -translate-y-full group-hover:translate-y-0 transition duration-500"></div>
             </motion.div>
-
-            <motion.div
-              variants={cardVariants}
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 0 20px rgba(0, 0, 0, 0.5)",
-              }}
-              className="bg-white/70 dark:bg-slate-900/70 text-indigo-600 dark:text-indigo-400 p-8 rounded-lg shadow-md relative overflow-hidden group"
-            >
-              <Zoom>
-                <img
-                  src="/Project3.png"
-                  alt="Project 3"
-                  className="w-full h-48 object-cover rounded-lg mb-4 transition duration-300 hover:scale-105"
-                />
-              </Zoom>
-              <a href="https://bsdmart.tkjsmkn2kudus.my.id" target="_blank">
-                <h3 className="text-2xl font-bold mb-4">BSD Mart</h3>
-              </a>
-              <p className="text-gray-600 dark:text-gray-200 mb-4">
-                Aplikasi bank sampah digital berbasis website yang
-                dipertandingkan di Krenova, Kabupaten Kudus pada tahun 2024.
-              </p>
-              <div className="absolute bottom-0 left-0 w-full bg-gradient-to-r from-indigo-500 to-purple-500 h-1 transform -translate-y-full group-hover:translate-y-0 transition duration-500"></div>
-            </motion.div>
           </div>
-            <div className="flex justify-end mt-5 hover:text-blue-200">
-          <Link href="/projects">
-              <motion.h1 whileHover={{scale: 1.05}}>Lihat Project Lainnya →</motion.h1>
-          </Link>
-            </div>
+          <div className="flex justify-end mt-5 hover:text-blue-200">
+            <Link href="/projects">
+              <motion.h1 whileHover={{ scale: 1.05 }}>
+                Lihat Project Lainnya →
+              </motion.h1>
+            </Link>
+          </div>
         </div>
       </section>
     </motion.div>

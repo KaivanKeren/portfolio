@@ -32,48 +32,60 @@ const EduHistory = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       viewport={{ once: true }}
-      className="flex flex-col items-center justify-center min-h-screen p-8 text-slate-900 dark:text-gray-200"
+      className="flex flex-col items-center justify-center min-h-screen py-16 px-4"
     >
-      <div className="w-full md:w-3/4 lg:w-1/2 p-8 space-y-8 text-center">
-        <motion.h2
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-wide leading-tight text-slate-900 dark:text-gray-200"
-        >
-          Riwayat Pendidikan
-        </motion.h2>
-        <motion.div
-          initial={{ y: 20, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="grid grid-cols-1 gap-8"
-        >
-          {educationData.map((item, index) => (
-            <Link href={item.link} target="_blank">
-              <div
-                key={index}
-                className="bg-gray-100/70 dark:bg-slate-800/70 rounded-lg shadow-lg overflow-hidden transition duration-300 hover:scale-105 hover:shadow-xl"
-              >
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-slate-900 dark:text-gray-200">
-                    {item.institution}
-                  </h3>
-                  <p className="text-base text-slate-700 dark:text-gray-300">
-                    {item.degree}
-                  </p>
-                  <p className="text-sm text-slate-500 dark:text-gray-400">
-                    {item.period}
-                  </p>
-                </div>
-                <div className="bg-gradient-to-r from-sky-400 to-blue-600 h-1"></div>
+      <motion.h2
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1, delay: 0.2 }}
+        viewport={{ once: true }}
+        className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-16 text-center text-gray-800 dark:text-white"
+      >
+        Riwayat Pendidikan
+      </motion.h2>
+      <motion.div
+        initial={{ y: 20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1, delay: 0.4 }}
+        viewport={{ once: true }}
+        className="w-full max-w-4xl space-y-12"
+      >
+        {educationData.map((item, index) => (
+          <motion.div
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
+            }}
+            className="dark:bg-white/10 bg-black/10 backdrop-blur-md border-2 border-gray-400 dark:border-gray-700 rounded-xl overflow-hidden transition-all duration-300"
+          >
+            <div className="p-6 flex flex-col md:flex-row justify-between items-start md:items-center">
+              <div>
+                <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">
+                  {item.institution}
+                </h3>
+                <p className="text-lg text-gray-600 dark:text-gray-300 mb-2">
+                  {item.degree}
+                </p>
+                <p className="text-md font-medium text-blue-600 dark:text-blue-400">
+                  {item.period}
+                </p>
               </div>
-            </Link>
-          ))}
-        </motion.div>
-      </div>
+              <motion.div whileHover={{ scale: 1.1 }} className="mt-4 md:mt-0">
+                <Link
+                  href={item.link}
+                  key={index}
+                  target="_blank"
+                  className="block"
+                >
+                  <span className="inline-block px-4 py-2 bg-blue-600 text-white rounded-full text-sm font-semibold hover:bg-blue-700 transition-colors duration-300">
+                    Lihat Lokasi
+                  </span>
+                </Link>
+              </motion.div>
+            </div>
+          </motion.div>
+        ))}
+      </motion.div>
     </motion.section>
   );
 };

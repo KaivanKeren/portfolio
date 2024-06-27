@@ -11,7 +11,7 @@ const Projects = () => {
   const controls = useAnimation();
   const [projectsRef, projectsInView] = useInView({
     triggerOnce: true,
-    rootMargin: "-100px",
+    threshold: 0.1,
   });
 
   React.useEffect(() => {
@@ -20,129 +20,116 @@ const Projects = () => {
     }
   }, [controls, projectsInView]);
 
-  const projectsVariants = {
-    hidden: { opacity: 0, y: 50 },
+  const containerVariants = {
+    hidden: {},
     visible: {
-      opacity: 1,
-      y: 0,
       transition: {
-        duration: 0.8,
-        staggerChildren: 0.3,
+        staggerChildren: 0.2,
       },
     },
   };
 
-  const cardVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0 },
+  const itemVariants = {
+    hidden: { y: 50, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        damping: 15,
+        stiffness: 100,
+      },
+    },
   };
+
+  const projects = [
+    {
+      title: "ZNMMIC",
+      description: "Website UMKM yang menawarkan layanan desain kustom menggunakan vektor.",
+      image: "/Project8.png",
+      link: "https://znmmic.vercel.app",
+    },
+    {
+      title: "Pengumuman Kelulusan",
+      description: "Website pengumuman kelulusan siswa kelas 12 di SMKN 2 Kudus.",
+      image: "/Project1.png",
+      link: "https://lulus.smkn2kudus.sch.id",
+    },
+    {
+      title: "Antrian PPDB Siswa",
+      description: "Website pengambilan antrian pendaftaran peserta didik baru di SMKN 2 Kudus.",
+      image: "/Project2.png",
+      link: "https://antrian.tkjsmkn2kudus.my.id",
+    },
+  ];
 
   return (
     <motion.div
-    id="project"
+      id="project"
       ref={projectsRef}
-      variants={projectsVariants}
+      variants={containerVariants}
       initial="hidden"
       animate={controls}
+      className="py-20 bg-gradient-to-r from-slate-500/50 to-indigo-700/50 dark:from-slate-800/50 dark:to-indigo-900/50 rounded-t-[2rem] backdrop-blur-lg text-white"
     >
-      <section className="bg-gradient-to-r from-slate-500/70 to-indigo-700/70 dark:from-slate-800/70 dark:to-indigo-900/70 rounded-t-[2rem] text-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <motion.h2
-              variants={cardVariants}
-              className="text-4xl font-bold mb-4"
-            >
-              Project Saya
-            </motion.h2>
-            <motion.p variants={cardVariants} className="text-gray-200">
-              Lihat beberapa project terbaru saya.
-            </motion.p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="container mx-auto px-4">
+        <motion.h2
+          variants={itemVariants}
+          className="text-5xl font-extrabold text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-indigo-200"
+        >
+          Project Saya
+        </motion.h2>
+        <motion.p variants={itemVariants} className="text-xl text-center text-gray-200 mb-12">
+          Lihat beberapa project terbaru saya.
+        </motion.p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          {projects.map((project, index) => (
             <motion.div
-              variants={cardVariants}
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 0 20px rgba(0, 0, 0, 0.5)",
-              }}
-              className="bg-white/70 dark:bg-slate-900/70 text-indigo-600 dark:text-indigo-400 p-8 rounded-lg shadow-md relative overflow-hidden group"
+              key={index}
+              variants={itemVariants}
+              whileHover={{ scale: 1.05, rotateY: 5 }}
+              className="bg-white/10 backdrop-blur-md rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-indigo-300/50"
             >
               <Zoom>
                 <img
-                  src="/Project8.png"
-                  alt="Project 6"
-                  className="w-full h-48 object-cover rounded-lg mb-4 transition duration-300 hover:scale-105"
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-48 object-cover transition duration-300 hover:opacity-80"
                 />
               </Zoom>
-              <a href="https://znmmic.vercel.app" target="_blank">
-                <h3 className="text-2xl font-bold mb-4">ZNMMIC</h3>
-              </a>
-              <p className="text-gray-600 dark:text-gray-200 mb-4">
-                Website UMKM yang menawarkan layanan desain kustom menggunakan
-                vektor.
-              </p>
-              <div className="absolute bottom-0 left-0 w-full bg-gradient-to-r from-indigo-500 to-purple-500 h-1 transform -translate-y-full group-hover:translate-y-0 transition duration-500"></div>
+              <div className="p-6">
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="block mb-3">
+                  <h3 className="text-2xl font-bold text-indigo-200 hover:text-white transition duration-300">
+                    {project.title}
+                  </h3>
+                </a>
+                <p className="text-gray-300 mb-4">{project.description}</p>
+                <Link
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-indigo-600 text-white py-2 px-4 rounded-full font-semibold hover:bg-indigo-700 transition duration-300 transform hover:scale-105"
+                >
+                  Lihat Project
+                </Link>
+              </div>
             </motion.div>
-            <motion.div
-              variants={cardVariants}
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 0 20px rgba(0, 0, 0, 0.5)",
-              }}
-              className="bg-white/70 dark:bg-slate-900/70 text-indigo-600 dark:text-indigo-400 p-8 rounded-lg shadow-md relative overflow-hidden group"
-            >
-              <Zoom>
-                <img
-                  src="/Project1.png"
-                  alt="Project 1"
-                  className="w-full h-48 object-cover rounded-lg mb-4 transition duration-300 hover:scale-105"
-                />
-              </Zoom>
-              <a href="https://lulus.smkn2kudus.sch.id" target="_blank">
-                <h3 className="text-2xl font-bold mb-4">
-                  Pengumuman Kelulusan
-                </h3>
-              </a>
-              <p className="text-gray-600 dark:text-gray-200 mb-4">
-                Website pengumuman kelulusan siswa kelas 12 di SMKN 2 Kudus.
-              </p>
-              <div className="absolute bottom-0 left-0 w-full bg-gradient-to-r from-indigo-500 to-purple-500 h-1 transform -translate-y-full group-hover:translate-y-0 transition duration-500"></div>
-            </motion.div>
-
-            <motion.div
-              variants={cardVariants}
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 0 20px rgba(0, 0, 0, 0.5)",
-              }}
-              className="bg-white/70 dark:bg-slate-900/70 text-indigo-600 dark:text-indigo-400 p-8 rounded-lg shadow-md relative overflow-hidden group"
-            >
-              <Zoom>
-                <img
-                  src="/Project2.png"
-                  alt="Project 2"
-                  className="w-full h-48 object-cover rounded-lg mb-4 transition duration-300 hover:scale-105"
-                />
-              </Zoom>
-              <a href="https://antrian.tkjsmkn2kudus.my.id" target="_blank">
-                <h3 className="text-2xl font-bold mb-4">Antrian PPDB Siswa</h3>
-              </a>
-              <p className="text-gray-600 dark:text-gray-200 mb-4">
-                Website pengambilan antrian pendaftaran peserta didik baru di
-                SMKN 2 Kudus.
-              </p>
-              <div className="absolute bottom-0 left-0 w-full bg-gradient-to-r from-indigo-500 to-purple-500 h-1 transform -translate-y-full group-hover:translate-y-0 transition duration-500"></div>
-            </motion.div>
-          </div>
-          <div className="flex justify-end mt-5 hover:text-blue-200">
-            <Link href="/projects">
-              <motion.h1 whileHover={{ scale: 1.05 }}>
-                Lihat Project Lainnya →
-              </motion.h1>
-            </Link>
-          </div>
+          ))}
         </div>
-      </section>
+        <motion.div
+          variants={itemVariants}
+          className="flex justify-end mt-10"
+        >
+          <Link href="/projects">
+            <motion.span
+              whileHover={{ scale: 1.05, x: 5 }}
+              className="text-xl font-semibold text-indigo-200 hover:text-white transition duration-300 cursor-pointer"
+            >
+              Lihat Project Lainnya →
+            </motion.span>
+          </Link>
+        </motion.div>
+      </div>
     </motion.div>
   );
 };

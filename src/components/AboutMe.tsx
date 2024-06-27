@@ -1,10 +1,12 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaLaptopCode, FaGamepad, FaPalette, FaMusic } from "react-icons/fa";
 
 const AboutMe = React.forwardRef<HTMLElement>((props, ref) => {
+  const [hoveredHobby, setHoveredHobby] = useState<string | null>(null);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -37,27 +39,37 @@ const AboutMe = React.forwardRef<HTMLElement>((props, ref) => {
     },
   };
 
+  const hobbies = [
+    { icon: FaLaptopCode, name: "Coding", color: "blue" },
+    { icon: FaGamepad, name: "Gaming", color: "yellow" },
+    { icon: FaPalette, name: "Drawing", color: "red" },
+    { icon: FaMusic, name: "Music", color: "yellow" },
+  ];
+
   return (
-    <>
-      <motion.section
-        id="tentang-saya"
-        ref={ref}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={containerVariants}
-        className="flex flex-col items-center justify-center rounded-xl shadow-xl min-h-[80vh] p-2 bg-gradient-to-r from-gray-400/50 to-sky-500/80 dark:from-slate-700/70 dark:to-sky-950/70 text-slate-900 dark:text-gray-200"
+    <motion.section
+      id="tentang-saya"
+      ref={ref}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={containerVariants}
+      className="flex flex-col items-center justify-center min-h-screen py-16 px-4"
+    >
+      <motion.h2
+        variants={childVariants}
+        className="text-3xl md:text-5xl font-extrabold mb-12 text-center text-gray-800 dark:text-white"
       >
-        <div className="w-full md:w-3/4 lg:w-1/2 p-2 space-y-8 text-center">
-          <motion.h2
-            variants={childVariants}
-            className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-wide leading-tight text-slate-900 dark:text-gray-200"
-          >
-            Tentang Saya
-          </motion.h2>
+        Tentang Saya
+      </motion.h2>
+      <motion.div
+        variants={childVariants}
+        className="w-full max-w-3xl dark:bg-white/10 bg-black/10 backdrop-blur-lg rounded-xl shadow-2xl overflow-hidden"
+      >
+        <div className="p-8 space-y-6">
           <motion.p
             variants={childVariants}
-            className="text-base sm:text-lg md:text-xl text-slate-900 dark:text-gray-300"
+            className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed"
           >
             Saya adalah seorang siswa berusia 16 tahun yang saat ini bersekolah
             di SMKN 2 Kudus. Saya memiliki minat yang kuat di bidang pemrograman
@@ -68,45 +80,56 @@ const AboutMe = React.forwardRef<HTMLElement>((props, ref) => {
 
           <motion.h3
             variants={childVariants}
-            className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-wide leading-tight text-slate-900 dark:text-gray-200 mt-8"
+            className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mt-8 mb-6"
           >
             Hobi
           </motion.h3>
 
-          <div className="flex flex-wrap justify-center gap-6">
-            <motion.div
-              variants={iconVariants}
-              className="flex flex-col items-center space-y-2"
-            >
-              <FaLaptopCode className="text-4xl text-blue-500" />
-              <p className="text-slate-900 dark:text-gray-300">Coding</p>
-            </motion.div>
-            <motion.div
-              variants={iconVariants}
-              className="flex flex-col items-center space-y-2"
-            >
-              <FaGamepad className="text-4xl text-green-600" />
-              <p className="text-slate-900 dark:text-gray-300">Gaming</p>
-            </motion.div>
-            <motion.div
-              variants={iconVariants}
-              className="flex flex-col items-center space-y-2"
-            >
-              <FaPalette className="text-4xl text-red-600" />
-              <p className="text-slate-900 dark:text-gray-300">Drawing</p>
-            </motion.div>
-            <motion.div
-              variants={iconVariants}
-              className="flex flex-col items-center space-y-2"
-            >
-              <FaMusic className="text-4xl text-yellow-600" />
-              <p className="text-slate-900 dark:text-gray-300">Music</p>
-            </motion.div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+            {hobbies.map((hobby) => (
+              <motion.div
+                key={hobby.name}
+                variants={iconVariants}
+                whileHover={{ scale: 1.1 }}
+                onMouseEnter={() => setHoveredHobby(hobby.name)}
+                onMouseLeave={() => setHoveredHobby(null)}
+                className="flex flex-col items-center justify-center p-4 dark:bg-white/10 bg-black/10 backdrop-blur-md rounded-lg transition-all duration-300 cursor-pointer"
+              >
+                <hobby.icon className={`text-5xl text-${hobby.color}-500 mb-2`} />
+                <p className="text-gray-800 dark:text-gray-200 font-medium">
+                  {hobby.name}
+                </p>
+                {hoveredHobby === hobby.name && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="mt-2 text-sm text-gray-600 dark:text-gray-400"
+                  >
+                    {getHobbyDescription(hobby.name)}
+                  </motion.div>
+                )}
+              </motion.div>
+            ))}
           </div>
         </div>
-      </motion.section>
-    </>
+      </motion.div>
+    </motion.section>
   );
 });
+
+function getHobbyDescription(hobby: string): string {
+  switch (hobby) {
+    case "Coding":
+      return "Saya suka memecahkan masalah melalui kode.";
+    case "Gaming":
+      return "Bermain game membantu saya berpikir strategis.";
+    case "Drawing":
+      return "Menggambar adalah cara saya mengekspresikan kreativitas.";
+    case "Music":
+      return "Musik membantu saya rileks dan fokus.";
+    default:
+      return "";
+  }
+}
 
 export default AboutMe;

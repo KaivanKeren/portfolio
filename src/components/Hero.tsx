@@ -72,14 +72,14 @@ const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="flex flex-col md:flex-row items-center justify-center rounded-xl shadow-xl min-h-screen p-4 bg-gradient-to-r from-slate-500/70 to-indigo-700/70 dark:from-slate-800/70 dark:to-indigo-900/70 text-white dark:bg-slate-800/70"
+        className="flex flex-col md:flex-row items-center justify-center rounded-xl shadow-xl min-h-screen p-4 bg-gradient-to-r from-sky-950/10 to-black/10 dark:from-sky-500/5 dark:to-white/10 dark:bg-slate-800/70 backdrop-blur-md"
       >
         <div className="md:w-1/2 p-8 space-y-6 text-center md:text-left">
           <motion.h2
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="text-3xl sm:text-4xl md:text-4xl font-semibold text-white drop-shadow-md dark:text-gray-300"
+            className="text-3xl sm:text-4xl md:text-4xl font-semibold drop-shadow-md dark:text-gray-300"
           >
             Halo,
           </motion.h2>
@@ -87,7 +87,7 @@ const Hero = () => {
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.7 }}
-            className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-wide leading-tight text-white drop-shadow-lg dark:text-gray-200"
+            className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-wide leading-tight drop-shadow-lg dark:text-gray-200"
           >
             Saya
             <Typewriter
@@ -104,7 +104,7 @@ const Hero = () => {
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.9 }}
-            className="text-base sm:text-lg md:text-lg text-white drop-shadow-sm dark:text-gray-300"
+            className="text-base sm:text-lg md:text-lg drop-shadow-sm dark:text-gray-300"
           >
             Seorang siswa SMK berusia 16 tahun yang bercita-cita menjadi seorang
             Software Engineer.
@@ -117,7 +117,7 @@ const Hero = () => {
                   boxShadow: "0 0 20px rgba(0, 0, 0, 0.5)",
                 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white text-indigo-600 mb-5 hover:bg-transparent hover:text-white hover:border-white border-2 transition duration-300 px-4 py-2 sm:px-6 sm:py-3 rounded-lg shadow-md dark:hover:text-white"
+                className="bg-slate-900 dark:bg-white dark:text-indigo-600 text-white mb-5 hover:bg-transparent dark:hover:bg-transparent hover:text-black hover:border-slate-900 dark:hover:border-white border-2 transition duration-300 px-4 py-2 sm:px-6 sm:py-3 rounded-lg shadow-md dark:hover:text-white"
               >
                 Tentang Saya
               </motion.button>
@@ -133,7 +133,7 @@ const Hero = () => {
                   boxShadow: "0 0 20px rgba(0, 0, 0, 0.5)",
                 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-transparent text-white mr-3 border-white border-2 hover:text-indigo-600 hover:bg-white transition duration-300 px-4 py-2 sm:px-6 sm:py-3 rounded-lg shadow-md dark:border-gray-300 dark:hover:text-indigo-400 dark:hover:bg-white dark:hover:border-indigo-600"
+                className="bg-transparent text-black dark:text-white mr-3 dark:border border-slate-900 border-2 hover:text-white hover:bg-slate-900 transition duration-300 px-4 py-2 sm:px-6 sm:py-3 rounded-lg shadow-md dark:border-slate-300 dark:hover:text-indigo-400 dark:hover:bg-white dark:hover:border-indigo-600"
               >
                 Hubungi saya
               </motion.button>

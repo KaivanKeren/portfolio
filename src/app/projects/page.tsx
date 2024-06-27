@@ -147,7 +147,7 @@ const page = () => {
                         scale: 1.05,
                         boxShadow: "0 0 20px rgba(0, 0, 0, 0.5)",
                       }}
-                      className="bg-white/70 dark:bg-slate-600/70 text-indigo-600 dark:text-indigo-400 p-8 rounded-lg shadow-md relative overflow-hidden group flex flex-col"
+                      className="bg-black/10 dark:bg-white/10 backdrop-blur-md text-indigo-600 dark:text-indigo-400 p-8 rounded-lg shadow-md relative overflow-hidden group flex flex-col"
                       layout
                     >
                       <Zoom>

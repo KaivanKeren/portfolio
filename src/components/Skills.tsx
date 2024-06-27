@@ -26,7 +26,7 @@ const Skills = () => {
   const controls = useAnimation();
   const [skillsRef, skillsInView] = useInView({
     triggerOnce: true,
-    rootMargin: "-100px",
+    threshold: 0.1,
   });
 
   React.useEffect(() => {
@@ -35,90 +35,88 @@ const Skills = () => {
     }
   }, [controls, skillsInView]);
 
-  const skillsVariants = {
-    hidden: { opacity: 0, y: 50 },
+  const containerVariants = {
+    hidden: {},
     visible: {
-      opacity: 1,
-      y: 0,
       transition: {
-        duration: 0.8,
-        staggerChildren: 0.3,
+        staggerChildren: 0.1,
       },
     },
   };
 
-  const cardVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0 },
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+      },
+    },
   };
 
   const skillBars = [
-    { skill: "HTML", logo: <SiHtml5 /> },
-    { skill: "CSS", logo: <SiCss3 /> },
-    { skill: "JS", logo: <SiJavascript /> },
-    { skill: "Python", logo: <SiPython /> },
-    { skill: "React JS", logo: <SiReact /> },
-    { skill: "Node JS", logo: <SiNodedotjs /> },
-    { skill: "Laravel", logo: <SiLaravel /> },
-    { skill: "Tailwind CSS", logo: <SiTailwindcss /> },
-    { skill: "Bootstrap", logo: <SiBootstrap /> },
-    { skill: "Vue JS", logo: <SiVuedotjs /> },
-    { skill: "MySQL", logo: <SiMysql /> },
-    { skill: "MongoDB", logo: <SiMongodb /> },
-    { skill: "Next JS", logo: <SiNextdotjs /> },
-    { skill: "Bun JS", logo: <SiBun /> },
-    { skill: "Construct 3", logo: <SiConstruct3 /> },
+    { skill: "HTML", logo: <SiHtml5 />, color: "text-orange-500" },
+    { skill: "CSS", logo: <SiCss3 />, color: "text-blue-500" },
+    { skill: "JS", logo: <SiJavascript />, color: "text-yellow-500" },
+    { skill: "Python", logo: <SiPython />, color: "text-blue-600" },
+    { skill: "React JS", logo: <SiReact />, color: "text-cyan-400" },
+    { skill: "Node JS", logo: <SiNodedotjs />, color: "text-green-500" },
+    { skill: "Laravel", logo: <SiLaravel />, color: "text-red-500" },
+    { skill: "Tailwind CSS", logo: <SiTailwindcss />, color: "text-teal-400" },
+    { skill: "Bootstrap", logo: <SiBootstrap />, color: "text-purple-500" },
+    { skill: "Vue JS", logo: <SiVuedotjs />, color: "text-emerald-500" },
+    { skill: "MySQL", logo: <SiMysql />, color: "text-blue-700" },
+    { skill: "MongoDB", logo: <SiMongodb />, color: "text-green-600" },
+    { skill: "Next JS", logo: <SiNextdotjs />, color: "text-gray-700" },
+    { skill: "Bun JS", logo: <SiBun />, color: "text-pink-500" },
+    { skill: "Construct 3", logo: <SiConstruct3 />, color: "text-indigo-500" },
   ];
 
   return (
     <motion.div
       id="keterampilan"
       ref={skillsRef}
-      variants={skillsVariants}
+      variants={containerVariants}
       initial="hidden"
       animate={controls}
+      className="py-20 "
     >
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <motion.h2
-              variants={cardVariants}
-              className="text-4xl font-bold text-indigo-600 dark:text-indigo-400 mb-4"
+      <div className="container mx-auto px-4">
+        <motion.h2
+          variants={itemVariants}
+          className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400 mb-6"
+        >
+          Keterampilan Saya
+        </motion.h2>
+        <motion.p
+          variants={itemVariants}
+          className="text-lg md:text-xl text-center text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto"
+        >
+          Berikut adalah beberapa keterampilan yang saya peroleh selama lebih dari satu tahun belajar dan mengembangkan diri.
+        </motion.p>
+        <motion.div
+          variants={containerVariants}
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8"
+        >
+          {skillBars.map((skill, index) => (
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="dark:bg-white/10 bg-black/10 backdrop-blur-md rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl"
             >
-              Keterampilan Saya
-            </motion.h2>
-            <motion.p
-              variants={cardVariants}
-              className="text-gray-600 dark:text-gray-200"
-            >
-              Berikut adalah beberapa keterampilan yang saya peroleh selama
-              lebih dari satu tahun belajar.
-            </motion.p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
-            {skillBars.map((skill, index) => (
-              <motion.div
-                key={index}
-                variants={cardVariants}
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow: "0 0 20px rgba(0, 0, 0, 0.5)",
-                }}
-                className="bg-gray-300/60 dark:bg-slate-800/70 p-3 rounded-lg shadow-md group"
-              >
-                <div className="flex items-center mb-4">
-                  <i className="inline-block mr-2 text-2xl dark:text-slate-300 text-slate-800">
-                    {skill.logo}
-                  </i>
-                  <h3 className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">
-                    {skill.skill}
-                  </h3>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+              <div className="p-4 flex flex-col items-center">
+                <div className={`text-4xl mb-4 ${skill.color}`}>{skill.logo}</div>
+                <h3 className="text-lg font-bold text-gray-800 dark:text-gray-200">{skill.skill}</h3>
+              </div>
+              <div className="bg-gradient-to-r from-indigo-500 to-purple-600 h-2"></div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
     </motion.div>
   );
 };

@@ -8,6 +8,7 @@ import "react-medium-image-zoom/dist/styles.css";
 import Header from "@/components/Header";
 import Loading from "@/components/Loading";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 
 const page = () => {
   const controls = useAnimation();
@@ -143,31 +144,39 @@ const page = () => {
                     <motion.div
                       key={index}
                       variants={cardVariants}
-                      whileHover={{
-                        scale: 1.05,
-                        boxShadow: "0 0 20px rgba(0, 0, 0, 0.5)",
-                      }}
-                      className="bg-black/10 dark:bg-white/10 backdrop-blur-md text-indigo-600 dark:text-indigo-400 p-8 rounded-lg shadow-md relative overflow-hidden group flex flex-col"
-                      layout
+                      whileHover={{ scale: 1.05, rotateY: 5 }}
+                      className="bg-black/10  dark:bg-white/10 backdrop-blur-md rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-indigo-300/50"
                     >
                       <Zoom>
-                        <div className="img-wrapper">
-                          <img
-                            src={project.imgSrc}
-                            alt={project.title}
-                            className="transition duration-300 hover:scale-105 rounded-lg"
-                          />
-                        </div>
+                        <img
+                          src={project.imgSrc}
+                          alt={project.title}
+                          className="w-full h-48 object-cover transition duration-300 hover:opacity-80"
+                        />
                       </Zoom>
-                      <a href={project.link} target="_blank">
-                        <h3 className="text-2xl font-bold mb-4 mt-3">
-                          {project.title}
-                        </h3>
-                      </a>
-                      <p className="text-gray-600 dark:text-gray-200 mb-4 flex-grow">
-                        {project.description}
-                      </p>
-                      <div className="absolute bottom-0 left-0 w-full bg-gradient-to-r from-indigo-500 to-purple-500 h-1 transform -translate-y-full group-hover:translate-y-0 transition duration-500"></div>
+                      <div className="p-6">
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block mb-3"
+                        >
+                          <h3 className="text-2xl font-bold dark:text-indigo-200 dark:hover:text-white transition duration-300">
+                            {project.title}
+                          </h3>
+                        </a>
+                        <p className="dark:text-gray-300 mb-4">
+                          {project.description}
+                        </p>
+                        <Link
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block bg-indigo-600 text-white py-2 px-4 rounded-full font-semibold hover:bg-indigo-700 transition duration-300 transform hover:scale-105"
+                        >
+                          Lihat Project
+                        </Link>
+                      </div>
                     </motion.div>
                   ))}
                 </div>

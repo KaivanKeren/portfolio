@@ -75,11 +75,11 @@ const Projects = () => {
       <div className="container mx-auto px-4">
         <motion.h2
           variants={itemVariants}
-          className="text-5xl font-extrabold text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-indigo-200"
+          className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-indigo-200"
         >
           Project Saya
         </motion.h2>
-        <motion.p variants={itemVariants} className="text-xl text-center text-gray-200 mb-12">
+        <motion.p variants={itemVariants} className="text-lg md:text-xl text-center text-gray-200 mb-12">
           Lihat beberapa project terbaru saya.
         </motion.p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">

@@ -64,7 +64,7 @@ const Skills = () => {
     { skill: "Python", logo: <SiPython />, color: "text-blue-600" },
     { skill: "React JS", logo: <SiReact />, color: "text-cyan-400" },
     { skill: "Node JS", logo: <SiNodedotjs />, color: "text-green-500" },
-{ skill: "Docker", logo: <SiDocker />, color: "text-blue-600" },
+    { skill: "Docker", logo: <SiDocker />, color: "text-blue-600" },
     { skill: "Laravel", logo: <SiLaravel />, color: "text-red-500" },
     { skill: "Tailwind CSS", logo: <SiTailwindcss />, color: "text-teal-400" },
     { skill: "Bootstrap", logo: <SiBootstrap />, color: "text-purple-500" },
@@ -96,7 +96,8 @@ const Skills = () => {
           variants={itemVariants}
           className="text-lg md:text-xl text-center text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto"
         >
-          Berikut adalah beberapa keterampilan yang saya peroleh selama lebih dari satu tahun belajar dan mengembangkan diri.
+          Berikut adalah beberapa keterampilan yang saya peroleh selama lebih
+          dari satu tahun belajar dan mengembangkan diri.
         </motion.p>
         <motion.div
           variants={containerVariants}
@@ -111,8 +112,12 @@ const Skills = () => {
               className="dark:bg-white/10 bg-black/10 backdrop-blur-md rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl"
             >
               <div className="p-4 flex flex-col items-center">
-                <div className={`text-4xl mb-4 ${skill.color}`}>{skill.logo}</div>
-                <h3 className="text-lg font-bold text-gray-800 dark:text-gray-200">{skill.skill}</h3>
+                <div className={`text-4xl mb-4 ${skill.color}`}>
+                  {skill.logo}
+                </div>
+                <h3 className="text-lg font-bold text-gray-800 dark:text-gray-200">
+                  {skill.skill}
+                </h3>
               </div>
               <div className="bg-gradient-to-r from-indigo-500 to-purple-600 h-2"></div>
             </motion.div>

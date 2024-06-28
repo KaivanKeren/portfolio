@@ -9,6 +9,7 @@ import {
   SiBun,
   SiConstruct3,
   SiCss3,
+  SiDocker,
   SiHtml5,
   SiJavascript,
   SiLaravel,
@@ -61,6 +62,7 @@ const Skills = () => {
     { skill: "CSS", logo: <SiCss3 />, color: "text-blue-500" },
     { skill: "JS", logo: <SiJavascript />, color: "text-yellow-500" },
     { skill: "Python", logo: <SiPython />, color: "text-blue-600" },
+    { skill: "Docker", logo: <SiDocker />, color: "text-blue-600" },
     { skill: "React JS", logo: <SiReact />, color: "text-cyan-400" },
     { skill: "Node JS", logo: <SiNodedotjs />, color: "text-green-500" },
     { skill: "Laravel", logo: <SiLaravel />, color: "text-red-500" },
@@ -98,7 +100,7 @@ const Skills = () => {
         </motion.p>
         <motion.div
           variants={containerVariants}
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8"
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-8"
         >
           {skillBars.map((skill, index) => (
             <motion.div

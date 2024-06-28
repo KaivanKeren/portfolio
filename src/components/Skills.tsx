@@ -73,7 +73,7 @@ const Skills = () => {
     { skill: "MongoDB", logo: <SiMongodb />, color: "text-green-600" },
     { skill: "Next JS", logo: <SiNextdotjs />, color: "text-gray-700" },
     { skill: "Bun JS", logo: <SiBun />, color: "text-pink-500" },
-    { skill: "Construct 3", logo: <SiConstruct3 />, color: "text-indigo-500" },
+    { skill: "Construct 3", logo: <SiConstruct3 />, color: "text-white" },
   ];
 
   return (

@@ -123,7 +123,7 @@ const Projects = () => {
           <Link href="/projects">
             <motion.span
               whileHover={{ scale: 1.05, x: 5 }}
-              className="text-xl font-semibold text-indigo-200 hover:text-white transition duration-300 cursor-pointer"
+              className="text-base sm:text-lg md:text-xl font-semibold text-indigo-200 hover:text-white transition duration-300 cursor-pointer"
             >
               Lihat Project Lainnya →
             </motion.span>

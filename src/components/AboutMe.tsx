@@ -69,7 +69,7 @@ const AboutMe = React.forwardRef<HTMLElement>((props, ref) => {
         <div className="p-8 space-y-6">
           <motion.p
             variants={childVariants}
-            className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed"
+            className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 dark:text-gray-300 leading-relaxed"
           >
             Saya adalah seorang siswa berusia 16 tahun yang saat ini bersekolah
             di SMKN 2 Kudus. Saya memiliki minat yang kuat di bidang pemrograman
@@ -80,7 +80,7 @@ const AboutMe = React.forwardRef<HTMLElement>((props, ref) => {
 
           <motion.h3
             variants={childVariants}
-            className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mt-8 mb-6"
+            className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mt-8 mb-4 md:mb-6"
           >
             Hobi
           </motion.h3>
@@ -93,9 +93,9 @@ const AboutMe = React.forwardRef<HTMLElement>((props, ref) => {
                 whileHover={{ scale: 1.1 }}
                 onMouseEnter={() => setHoveredHobby(hobby.name)}
                 onMouseLeave={() => setHoveredHobby(null)}
-                className="flex flex-col items-center justify-center p-4 dark:bg-white/10 bg-black/10 backdrop-blur-md rounded-lg transition-all duration-300 cursor-pointer"
+                className="flex flex-col items-center justify-center p-2 md:p-4 dark:bg-white/10 bg-black/10 backdrop-blur-md rounded-lg transition-all duration-300 cursor-pointer"
               >
-                <hobby.icon className={`text-5xl text-${hobby.color}-500 mb-2`} />
+                <hobby.icon className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-${hobby.color}-500 mb-2`} />
                 <p className="text-gray-800 dark:text-gray-200 font-medium">
                   {hobby.name}
                 </p>
@@ -103,7 +103,7 @@ const AboutMe = React.forwardRef<HTMLElement>((props, ref) => {
                   <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="mt-2 text-sm text-gray-600 dark:text-gray-400"
+                    className="mt-2 text-xs md:text-sm text-gray-600 dark:text-gray-400"
                   >
                     {getHobbyDescription(hobby.name)}
                   </motion.div>

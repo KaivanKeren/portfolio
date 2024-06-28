@@ -16,6 +16,7 @@ import {
   SiMysql,
   SiNextdotjs,
   SiNodedotjs,
+  SiPhp,
   SiPython,
   SiReact,
   SiTailwindcss,
@@ -61,6 +62,7 @@ const Skills = () => {
     { skill: "CSS", logo: <SiCss3 />, color: "text-blue-500" },
     { skill: "JS", logo: <SiJavascript />, color: "text-yellow-500" },
     { skill: "Python", logo: <SiPython />, color: "text-blue-600" },
+    { skill: "PHP", logo: <SiPhp />, color: "text-purple-600" },
     { skill: "React JS", logo: <SiReact />, color: "text-cyan-400" },
     { skill: "Node JS", logo: <SiNodedotjs />, color: "text-green-500" },
     { skill: "Docker", logo: <SiDocker />, color: "text-blue-600" },
@@ -93,14 +95,14 @@ const Skills = () => {
         </motion.h2>
         <motion.p
           variants={itemVariants}
-          className="text-lg md:text-xl text-center text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto"
+          className="text-sm sm:text-base md:text-lg lg:text-xl text-center text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto"
         >
           Berikut adalah beberapa keterampilan yang saya peroleh selama lebih
           dari satu tahun belajar dan mengembangkan diri.
         </motion.p>
         <motion.div
           variants={containerVariants}
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-8"
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-8"
         >
           {skillBars.map((skill, index) => (
             <motion.div
@@ -110,13 +112,13 @@ const Skills = () => {
               whileTap={{ scale: 0.95 }}
               className={`dark:bg-white/10 bg-black/10 backdrop-blur-md rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl ${skill.color}`}
             >
-              <div className="p-4 flex flex-col items-center">
-                <div className="text-4xl mb-4">{skill.logo}</div>
-                <h3 className="text-lg font-bold text-gray-800 dark:text-gray-200">
+              <div className="p-2 md:p-4 flex flex-col items-center">
+                <div className="text-2xl md:text-3xl lg:text-4xl mb-4">{skill.logo}</div>
+                <h3 className="text-base md:text-lg font-bold text-gray-800 dark:text-gray-200">
                   {skill.skill}
                 </h3>
               </div>
-              <div className={`bg-gradient-to-r ${skill.color} h-2`}></div>
+              <div className="bg-gradient-to-r from-indigo-500 to-purple-600 h-2"></div>{" "}
             </motion.div>
           ))}
         </motion.div>

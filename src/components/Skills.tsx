@@ -77,7 +77,7 @@ const Skills = () => {
 
   return (
     <motion.div
-      id="skills"
+      id="keterampilan"
       ref={skillsRef}
       variants={containerVariants}
       initial="hidden"

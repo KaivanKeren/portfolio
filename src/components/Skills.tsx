@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
@@ -71,19 +70,19 @@ const Skills = () => {
     { skill: "Vue JS", logo: <SiVuedotjs />, color: "text-emerald-500" },
     { skill: "MySQL", logo: <SiMysql />, color: "text-blue-700" },
     { skill: "MongoDB", logo: <SiMongodb />, color: "text-green-600" },
-    { skill: "Next JS", logo: <SiNextdotjs />, color: "text-gray-700" },
-    { skill: "Bun JS", logo: <SiBun />, color: "text-pink-500" },
-    { skill: "Construct 3", logo: <SiConstruct3 />, color: "text-white" },
+    { skill: "Next JS", logo: <SiNextdotjs />, color: "text-gray-900" },
+    { skill: "Bun JS", logo: <SiBun />, color: "text-teal-400" },
+    { skill: "Construct 3", logo: <SiConstruct3 />, color: "text-gray-400" },
   ];
 
   return (
     <motion.div
-      id="keterampilan"
+      id="skills"
       ref={skillsRef}
       variants={containerVariants}
       initial="hidden"
       animate={controls}
-      className="py-20 "
+      className="py-20"
     >
       <div className="container mx-auto px-4">
         <motion.h2
@@ -109,17 +108,15 @@ const Skills = () => {
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="dark:bg-white/10 bg-black/10 backdrop-blur-md rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl"
+              className={`dark:bg-white/10 bg-black/10 backdrop-blur-md rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl ${skill.color}`}
             >
               <div className="p-4 flex flex-col items-center">
-                <div className={`text-4xl mb-4 ${skill.color}`}>
-                  {skill.logo}
-                </div>
+                <div className="text-4xl mb-4">{skill.logo}</div>
                 <h3 className="text-lg font-bold text-gray-800 dark:text-gray-200">
                   {skill.skill}
                 </h3>
               </div>
-              <div className="bg-gradient-to-r from-indigo-500 to-purple-600 h-2"></div>
+              <div className={`bg-gradient-to-r ${skill.color} h-2`}></div>
             </motion.div>
           ))}
         </motion.div>

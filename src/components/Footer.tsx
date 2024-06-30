@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { FaGithub, FaTiktok, FaArrowUp, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaTiktok, FaArrowUp, FaEnvelope, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   const { ref, inView } = useInView();
   const [isVisible, setIsVisible] = useState(false);
-  const [activeIcon, setActiveIcon] = useState(null);
+  const [activeIcon, setActiveIcon] = useState<number | null>(null);
 
   const handleScrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -24,7 +24,7 @@ const Footer = () => {
   const socialLinks = [
     { icon: FaGithub, href: "https://github.com/KaivanKeren", label: "GitHub" },
     { icon: FaTiktok, href: "https://tiktok.com/@ismailkds4", label: "TikTok" },
-    { icon: FaEnvelope, href: "mailto:x.iml.7122@gmail.com", label: "Email" },
+    { icon: FaInstagram, href: "mailto:x.iml.7122@gmail.com", label: "Email" },
   ];
 
   return (
@@ -78,7 +78,7 @@ const Footer = () => {
       {isVisible && (
         <motion.button
           onClick={handleScrollToTop}
-          className="fixed bottom-4 right-4 bg-gray-800 text-white dark:bg-white dark:text-indigo-800 p-3 rounded-full shadow-lg transition duration-300 hover:bg-indigo-100"
+          className="fixed bottom-4 right-4 bg-gray-800 text-white dark:bg-white dark:text-indigo-800 p-3 rounded-full shadow-lg transition duration-300 dark:hover:bg-indigo-100 hover:bg-slate-800"
           aria-label="Gulir ke atas"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

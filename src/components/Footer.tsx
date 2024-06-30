@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { FaGithub, FaTiktok, FaArrowUp, FaEnvelope, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaTiktok, FaArrowUp, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
   const { ref, inView } = useInView();
@@ -24,7 +24,7 @@ const Footer = () => {
   const socialLinks = [
     { icon: FaGithub, href: "https://github.com/KaivanKeren", label: "GitHub" },
     { icon: FaTiktok, href: "https://tiktok.com/@ismailkds4", label: "TikTok" },
-    { icon: FaInstagram, href: "mailto:x.iml.7122@gmail.com", label: "Email" },
+    { icon: FaEnvelope, href: "mailto:x.iml.7122@gmail.com", label: "Email" },
   ];
 
   return (

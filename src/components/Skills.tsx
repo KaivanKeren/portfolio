@@ -91,14 +91,14 @@ const Skills = () => {
           variants={itemVariants}
           className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400 mb-6"
         >
-          Keterampilan Saya
+          My Skills
         </motion.h2>
         <motion.p
           variants={itemVariants}
           className="text-sm sm:text-base md:text-lg lg:text-xl text-center text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto"
         >
-          Berikut adalah beberapa keterampilan yang saya peroleh selama lebih
-          dari satu tahun belajar dan mengembangkan diri.
+          Here are some of the skills I have acquired over the years from a year
+          of learning and developing myself.
         </motion.p>
         <motion.div
           variants={containerVariants}
@@ -113,7 +113,9 @@ const Skills = () => {
               className={`dark:bg-white/10 bg-black/10 backdrop-blur-md rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:shadow-2xl ${skill.color}`}
             >
               <div className="p-2 md:p-4 flex flex-col items-center">
-                <div className="text-2xl md:text-3xl lg:text-4xl mb-4">{skill.logo}</div>
+                <div className="text-2xl md:text-3xl lg:text-4xl mb-4">
+                  {skill.logo}
+                </div>
                 <h3 className="text-base md:text-lg font-bold text-gray-800 dark:text-gray-200">
                   {skill.skill}
                 </h3>

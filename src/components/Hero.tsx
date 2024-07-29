@@ -81,7 +81,7 @@ const Hero = () => {
             transition={{ duration: 1, delay: 0.5 }}
             className="text-3xl sm:text-4xl md:text-4xl font-semibold drop-shadow-md dark:text-gray-300"
           >
-            Halo,
+            Hallo,
           </motion.h2>
           <motion.div
             initial={{ y: -100, opacity: 0 }}
@@ -89,9 +89,9 @@ const Hero = () => {
             transition={{ duration: 1, delay: 0.7 }}
             className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-wide leading-tight drop-shadow-lg dark:text-gray-200"
           >
-            Saya
+            I'm
             <Typewriter
-              words={[" Ismail", " Siswa SMK", " Programmer"]}
+              words={[" Ismail", " Students", " Programmer"]}
               loop={false}
               cursor
               cursorStyle="|"
@@ -106,7 +106,7 @@ const Hero = () => {
             transition={{ duration: 1, delay: 0.9 }}
             className="text-base sm:text-lg md:text-lg drop-shadow-sm dark:text-gray-300"
           >
-            Seorang siswa SMK berusia 16 tahun yang bercita-cita menjadi seorang
+            A 16 year old vocational school student who dreams of becoming a student
             Software Engineer.
           </motion.p>
           <div className="space-x-4">
@@ -119,7 +119,7 @@ const Hero = () => {
                 whileTap={{ scale: 0.95 }}
                 className="bg-slate-900 dark:bg-white dark:text-indigo-600 text-white mb-5 hover:bg-transparent dark:hover:bg-transparent hover:text-black hover:border-slate-900 dark:hover:border-white border-2 transition duration-300 px-4 py-2 sm:px-6 sm:py-3 rounded-lg shadow-md dark:hover:text-white"
               >
-                Tentang Saya
+                About Me
               </motion.button>
             </Link>
             <a
@@ -135,7 +135,7 @@ const Hero = () => {
                 whileTap={{ scale: 0.95 }}
                 className="bg-transparent text-black dark:text-white mr-3 dark:border border-slate-900 border-2 hover:text-white hover:bg-slate-900 transition duration-300 px-4 py-2 sm:px-6 sm:py-3 rounded-lg shadow-md dark:border-slate-300 dark:hover:text-indigo-400 dark:hover:bg-white dark:hover:border-indigo-600"
               >
-                Hubungi saya
+                Contact Me
               </motion.button>
             </a>
           </div>

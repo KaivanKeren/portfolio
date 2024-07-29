@@ -49,7 +49,7 @@ const AchievementCard: React.FC<AchievementCardProps> = ({
         >
           <span className="inline-flex items-center cursor-pointer px-2 sm:px-4 py-1 sm:py-2 bg-blue-600 text-white rounded-full text-xs md:text-sm font-semibold hover:bg-blue-700 transition-colors duration-300">
             <BsFileEarmarkPdfFill className="mr-2 hidden sm:block" />
-            Lihat Sertifikat
+            View Certificates
           </span>
         </motion.div>
       </div>

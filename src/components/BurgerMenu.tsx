@@ -55,22 +55,22 @@ const BurgerMenu: React.FC = () => {
             </button>
             <Link href="#tentang-saya">
               <h3 className="block hover:text-blue-500 transition duration-300 mb-2">
-                Tentang Saya
+                About Me
               </h3>
             </Link>
             <Link href="#pencapaian">
               <h3 className="block hover:text-blue-500 transition duration-300 mb-2">
-                Pencapaian
+                Achievement
               </h3>
             </Link>
             <Link href="#riwayat-pendidikan">
               <h3 className="block hover:text-blue-500 transition duration-300 mb-2">
-                Riwayat Pendidikan
+                Education
               </h3>
             </Link>
             <Link href="#keterampilan">
               <h3 className="block hover:text-blue-500 transition duration-300 mb-2">
-                Keterampilan
+                Skills
               </h3>
             </Link>
             <Link href="#project">

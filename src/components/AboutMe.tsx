@@ -60,7 +60,7 @@ const AboutMe = React.forwardRef<HTMLElement>((props, ref) => {
         variants={childVariants}
         className="text-3xl md:text-5xl font-extrabold mb-12 text-center text-gray-800 dark:text-white"
       >
-        Tentang Saya
+        About Me
       </motion.h2>
       <motion.div
         variants={childVariants}
@@ -71,18 +71,18 @@ const AboutMe = React.forwardRef<HTMLElement>((props, ref) => {
             variants={childVariants}
             className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 dark:text-gray-300 leading-relaxed"
           >
-            Saya adalah seorang siswa berusia 16 tahun yang saat ini bersekolah
-            di SMKN 2 Kudus. Saya memiliki minat yang kuat di bidang pemrograman
-            dan selalu berusaha mengasah keterampilan saya dalam berbagai bahasa
-            pemrograman dan teknologi. Saya memiliki mimpi atau bercita-cita
-            sebagai software engineer.
+            I am a 16 year old student currently attending school
+            at SMKN 2 Kudus. I have a strong interest in programming
+            and always try to hone my skills in various languages
+            programming and technology. I have a dream or aspire
+            as a software engineer.
           </motion.p>
 
           <motion.h3
             variants={childVariants}
             className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mt-8 mb-4 md:mb-6"
           >
-            Hobi
+            Hobby
           </motion.h3>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
@@ -120,13 +120,13 @@ const AboutMe = React.forwardRef<HTMLElement>((props, ref) => {
 function getHobbyDescription(hobby: string): string {
   switch (hobby) {
     case "Coding":
-      return "Saya suka memecahkan masalah melalui kode.";
+      return "I love solving problems through code.";
     case "Gaming":
-      return "Bermain game membantu saya berpikir strategis.";
+      return "Playing games helps me think strategically.";
     case "Drawing":
-      return "Menggambar adalah cara saya mengekspresikan kreativitas.";
+      return "Drawing is my way of expressing creativity.";
     case "Music":
-      return "Musik membantu saya rileks dan fokus.";
+      return "Music helps me relax and focus.";
     default:
       return "";
   }

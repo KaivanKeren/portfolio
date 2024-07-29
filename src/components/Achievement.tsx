@@ -45,7 +45,7 @@ const Achievement = () => {
           variants={childVariants}
           className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-wide leading-tight text-slate-900 dark:text-gray-200"
         >
-          Pencapaian
+          Achievement
         </motion.h2>
         <motion.div
           variants={childVariants}
@@ -53,31 +53,31 @@ const Achievement = () => {
         >
           <AchievementCard
             icon={<FaTrophy className="text-5xl text-yellow-500" />}
-            title="Juara I Web Design Competition Dekan Cup Fakultas Teknik 2024."
+            title="First Place in the 2024 Faculty of Engineering Dekan Cup Web Design Competition."
             certificateUrl="/DekanCup.pdf"
             handleCertificateClick={handleCertificateClick}
           />
           <AchievementCard
             icon={<FaTrophy className="text-5xl text-yellow-500" />}
-            title="Juara II Lomba Kompetensi Siswa (LKS) Web Technology Tingkat Kabupaten Kudus tahun 2024."
+            title="Second place in the Student Competency Competition (LKS) Web Technology at Kudus Regency Level in 2024."
             certificateUrl="/LKS.pdf"
             handleCertificateClick={handleCertificateClick}
           />
           <AchievementCard
             icon={<FaMedal className="text-5xl text-gray-500" />}
-            title="Teater terbaik 5 Festival Teater Pelajar Tingkat Kabupaten Kudus tahun 2023."
+            title="The best theater in the 5 Kudus Regency Student Theater Festivals in 2023."
             certificateUrl="/Teater.pdf"
             handleCertificateClick={handleCertificateClick}
           />
           <AchievementCard
             icon={<FaCertificate className="text-5xl text-blue-500" />}
-            title="Sertifikasi Belajar Dasar Visualisasi Data Dicoding."
+            title="Dicoding Basic Learning Certification of Data Visualization."
             certificateUrl="/Dicoding.pdf"
             handleCertificateClick={handleCertificateClick}
           />
           <AchievementCard
             icon={<FaCertificate className="text-5xl text-blue-500" />}
-            title="Sertifikasi Mengenal Pemrograman Komputer Codepolitan."
+            title="Codepolitan Computer Programming Certification."
             certificateUrl="/Codepolitan.pdf"
             handleCertificateClick={handleCertificateClick}
           />

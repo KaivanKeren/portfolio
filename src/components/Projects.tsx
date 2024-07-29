@@ -44,22 +44,24 @@ const Projects = () => {
 
   const projects = [
     {
+      title: "XII TJKT 1",
+      description: "Class XII TJKT 1 SMKN 2 Kudus website.",
+      image: "/Project9.png",
+      link: "https://xii-tjkt-1.vercel.app",
+    },
+    {
       title: "ZNMMIC",
-      description: "Website UMKM yang menawarkan layanan desain kustom menggunakan vektor.",
+      description:
+        "MSME website that offers custom design services using vectors.",
       image: "/Project8.png",
       link: "https://znmmic.vercel.app",
     },
     {
-      title: "Pengumuman Kelulusan",
-      description: "Website pengumuman kelulusan siswa kelas 12 di SMKN 2 Kudus.",
+      title: "Graduation Announcement",
+      description:
+        "Website announcing the graduation of grade 12 students at SMKN 2 Kudus.",
       image: "/Project1.png",
       link: "https://lulus.smkn2kudus.sch.id",
-    },
-    {
-      title: "Antrian PPDB Siswa",
-      description: "Website pengambilan antrian pendaftaran peserta didik baru di SMKN 2 Kudus.",
-      image: "/Project2.png",
-      link: "https://antrian.tkjsmkn2kudus.my.id",
     },
   ];
 
@@ -77,10 +79,13 @@ const Projects = () => {
           variants={itemVariants}
           className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-indigo-200"
         >
-          Project Saya
+          My Projects
         </motion.h2>
-        <motion.p variants={itemVariants} className="text-lg md:text-xl text-center text-gray-200 mb-12">
-          Lihat beberapa project terbaru saya.
+        <motion.p
+          variants={itemVariants}
+          className="text-lg md:text-xl text-center text-gray-200 mb-12"
+        >
+          Check out some of my latest projects.
         </motion.p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {projects.map((project, index) => (
@@ -98,7 +103,12 @@ const Projects = () => {
                 />
               </Zoom>
               <div className="p-6">
-                <a href={project.link} target="_blank" rel="noopener noreferrer" className="block mb-3">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block mb-3"
+                >
                   <h3 className="text-2xl font-bold text-indigo-200 hover:text-white transition duration-300">
                     {project.title}
                   </h3>
@@ -110,22 +120,19 @@ const Projects = () => {
                   rel="noopener noreferrer"
                   className="inline-block bg-indigo-600 text-white py-2 px-4 rounded-full font-semibold hover:bg-indigo-700 transition duration-300 transform hover:scale-105"
                 >
-                  Lihat Project
+                  View Projects
                 </Link>
               </div>
             </motion.div>
           ))}
         </div>
-        <motion.div
-          variants={itemVariants}
-          className="flex justify-end mt-10"
-        >
+        <motion.div variants={itemVariants} className="flex justify-end mt-10">
           <Link href="/projects">
             <motion.span
               whileHover={{ scale: 1.05, x: 5 }}
               className="text-base sm:text-lg md:text-xl font-semibold text-indigo-200 hover:text-white transition duration-300 cursor-pointer"
             >
-              Lihat Project Lainnya →
+              See Other Projects →
             </motion.span>
           </Link>
         </motion.div>

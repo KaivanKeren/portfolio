@@ -62,16 +62,16 @@ const Header: React.FC = () => {
       </motion.div>
       <nav className="hidden md:flex space-x-8">
         <Link href="#tentang-saya">
-          <h3 className="hover:text-blue-500 transition duration-300">Tentang Saya</h3>
+          <h3 className="hover:text-blue-500 transition duration-300">About Me</h3>
         </Link>
         <Link href="#pencapaian">
-          <h3 className="hover:text-blue-500 transition duration-300">Pencapaian</h3>
+          <h3 className="hover:text-blue-500 transition duration-300">Achievement</h3>
         </Link>
         <Link href="#riwayat-pendidikan">
-          <h3 className="hover:text-blue-500 transition duration-300">Riwayat Pendidikan</h3>
+          <h3 className="hover:text-blue-500 transition duration-300">Education</h3>
         </Link>
         <Link href="#keterampilan">
-          <h3 className="hover:text-blue-500 transition duration-300">Keterampilan</h3>
+          <h3 className="hover:text-blue-500 transition duration-300">Skills</h3>
         </Link>
         <Link href="#project">
           <h3 className="hover:text-blue-500 transition duration-300">Project</h3>

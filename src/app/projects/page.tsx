@@ -79,65 +79,70 @@ const page = () => {
                     variants={cardVariants}
                     className="dark:text-gray-200"
                   >
-                    Lihat beberapa project saya.
+                    Check out some of my projects.
                   </motion.p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   {[
                     {
+                      imgSrc: "/Project9.png",
+                      title: "XII TJKT 1",
+                      description: "Class XII TJKT 1 SMKN 2 Kudus website.",
+                      link: "https://xii-tjkt-1.vercel.app",
+                    },
+                    {
                       imgSrc: "/Project8.png",
                       title: "ZNMMIC",
                       description:
-                        "Website UMKM yang menawarkan layanan desain kustom menggunakan vektor.",
+                        "MSME website that offers custom design services using vectors.",
                       link: "https://znmmic.vercel.app",
                     },
                     {
                       imgSrc: "/Project1.png",
-                      title: "Pengumuman Kelulusan",
+                      title: "Graduation Announcement",
                       description:
-                        "Website pengumuman kelulusan siswa kelas 12 di SMKN 2 Kudus.",
+                        "Website announcing the graduation of grade 12 students at SMKN 2 Kudus.",
                       link: "https://lulus.smkn2kudus.sch.id",
                     },
                     {
                       imgSrc: "/Project2.png",
-                      title: "Antrian PPDB Siswa",
+                      title: "Student PPDB Queue",
                       description:
-                        "Website pengambilan antrian pendaftaran peserta didik baru di SMKN 2 Kudus.",
+                        "Website for taking the registration queue for new students at SMKN 2 Kudus.",
                       link: "https://antrian.tkjsmkn2kudus.my.id",
                     },
                     {
                       imgSrc: "/Project3.png",
                       title: "BSD Mart",
                       description:
-                        "Aplikasi bank sampah digital berbasis website.",
+                        "Website-based digital waste bank application.",
                       link: "https://bsdmart.tkjsmkn2kudus.my.id",
                     },
                     {
                       imgSrc: "/Project4.png",
                       title: "Expenses",
                       description:
-                        "Belajar membuat website pengelola pengeluaran menggunakan Bun JS, Next JS, Hono JS, dan Supabase.",
+                        "Learn to create an expense management website using Bun JS, Next JS, Hono JS, and Supabase.",
                       link: "https://github.com/KaivanKeren/expenses",
                     },
                     {
                       imgSrc: "/Project5.png",
                       title: "Mahabharata War",
                       description:
-                        "Project game pertama saya tentang perang Mahabharata.",
+                        "My first game project about the Mahabharata war.",
                       link: "https://kaivankeren.itch.io/mahabharata",
                     },
                     {
                       imgSrc: "/Project6.png",
-                      title: "List Belanja",
+                      title: "Shopping List",
                       description:
-                        "Belajar membuat website list belanja menggunakan HTML, CSS dan framework Vue JS.",
+                        "Learn to create a shopping list website using HTML, CSS and the Vue JS framework.",
                       link: "https://github.com/KaivanKeren/List-Belanja",
                     },
                     {
                       imgSrc: "/Project7.png",
                       title: "M-Bot",
-                      description:
-                        "Project pertama saya menggunakan HTML, CSS, dan JS.",
+                      description: "My first project uses HTML, CSS, and JS.",
                       link: "https://github.com/KaivanKeren/Project-Pertama-JS",
                     },
                   ].map((project, index) => (
@@ -174,7 +179,7 @@ const page = () => {
                           rel="noopener noreferrer"
                           className="inline-block bg-indigo-600 text-white py-2 px-4 rounded-full font-semibold hover:bg-indigo-700 transition duration-300 transform hover:scale-105"
                         >
-                          Lihat Project
+                          View Projects
                         </Link>
                       </div>
                     </motion.div>

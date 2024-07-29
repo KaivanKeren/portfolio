@@ -40,12 +40,12 @@ const Footer = () => {
           <div className="text-center md:text-left mb-6 md:mb-0">
             <h3 className="text-2xl font-bold mb-2">Ismail</h3>
             <p className="mb-1">
-              &copy; {new Date().getFullYear()} Hak Cipta Dilindungi
+              &copy; {new Date().getFullYear()} All Rights Reserved
             </p>
-            <p>Kudus, Jawa Tengah, Indonesia</p>
+            <p>Kudus, Central Java, Indonesia</p>
           </div>
           <div className="flex flex-col items-center md:items-end">
-            <h4 className="text-xl font-semibold mb-3">Ikuti Saya</h4>
+            <h4 className="text-xl font-semibold mb-3">Follow Me</h4>
             <div className="flex space-x-4">
               {socialLinks.map((link, index) => (
                 <motion.a

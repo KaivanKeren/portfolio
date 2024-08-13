@@ -15,6 +15,7 @@ import {
   SiMongodb,
   SiMysql,
   SiNextdotjs,
+  SiNginx,
   SiNodedotjs,
   SiPhp,
   SiPython,
@@ -75,6 +76,7 @@ const Skills = () => {
     { skill: "Next JS", logo: <SiNextdotjs />, color: "text-gray-900" },
     { skill: "Bun JS", logo: <SiBun />, color: "text-teal-400" },
     { skill: "Construct 3", logo: <SiConstruct3 />, color: "text-gray-400" },
+    { skill: "Nginx", logo: <SiNginx />, color: "text-green-700" },
   ];
 
   return (

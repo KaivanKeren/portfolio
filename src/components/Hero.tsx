@@ -91,7 +91,7 @@ const Hero = () => {
           >
             I'm
             <Typewriter
-              words={[" Ismail", " Students", " Programmer"]}
+              words={[" Ismail", " Student", " Programmer"]}
               loop={false}
               cursor
               cursorStyle="|"
